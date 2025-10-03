@@ -157,12 +157,53 @@ const plans = [
     },
 ];
 
+const faqdata = [
+    {
+        title: "Is Cresora really free to start?",
+        subject:
+            "Yes. You can use Cresora’s core features for free, with no credit card required. When your team or needs grow, you can upgrade anytime.",
+        link: "/",
+    },
+    {
+        title: "Can I invite my team?",
+        subject:
+            "",
+        link: "/",
+    },
+    {
+        title: "What if I already use spreadsheets or other tools?",
+        subject:
+            "",
+        link: "/",
+    },
+    {
+        title: "Who is Cresora built for?",
+        subject:
+            "Cresora is built for founders, operators, and growing teams who want a simpler way to manage business finances, without complex tools.",
+        link: "/",
+    },
+    {
+        title: "Do I need to be a finance expert to use Cresora?",
+        subject:
+            "",
+        link: "/",
+    },
+    {
+        title: "Is my financial data safe?",
+        subject:
+            "",
+        link: "/",
+    },
+];
+
+
 export {
+    plans,
+    faqdata,
     navLinks,
-    roundedImages,
     features,
+    roundedImages,
     featureCardData,
     benefitCardData,
     testimonialCardData,
-    plans,
 };

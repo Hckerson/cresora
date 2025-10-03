@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Description from "../ui/description";
-import PricingPlanCard from "../ui/pricing-plan";
+import PricingPlanCard from "../ui/pricing-card";
 import { plans } from "@/app/lib/placeholder-data";
 
 export default function Pricing() {
