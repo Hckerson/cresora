@@ -30,22 +30,22 @@ export default function PricingPlanCard({
     return (
         <div
             className={clsx(
-                "text-foreground box-border flex flex-col gap-y-8 rounded-2xl border border-[#E4E4E4] bg-[#FFFFFF] p-8",
+                "text-foreground box-border flex flex-col gap-y-8 rounded-2xl border border-[#E4E4E4] bg-[#FFFFFF] p-5 xs:p-8",
                 geist.className,
             )}
         >
-            <div className={clsx("flex flex-col gap-y-6 rounded-[12px] bg-[#FCFBFC] p-6", name == "Growth" && "bg-linear-to-b from-[#1763CC]/4 to-[#1763CC]/32")}>
+            <div className={clsx("flex flex-col gap-y-6 rounded-[12px] bg-[#FCFBFC] p-3 xs:p-6", name == "Growth" && "bg-linear-to-b from-[#1763CC]/4 to-[#1763CC]/32")}>
                 <div className="flex flex-col gap-y-2">
-                    <p className="text-foreground text-2xl leading-[1.32] font-medium">
+                    <p className="text-foreground text-sm xs:text-2xl leading-[1.32] font-medium">
                         {name}
                     </p>
-                    <p className="text-primary-foreground text-[16px]">
+                    <p className="text-primary-foreground text-xs xs:text-[16px]">
                         {about}
                     </p>
                 </div>
                 <div className="flex flex-col gap-y-4">
                     <div className="flex">
-                        <p className="leading-[1.24] font-semibold tracking-wide">
+                        <p className="leading-[1.24] xs:text-base text-sm font-semibold tracking-wide">
                             {plan == "month" ? monthlyCost : yearlyCost}
                             <span>/{plan == "month" ? "month" : "year"}</span>
                         </p>
@@ -65,24 +65,24 @@ export default function PricingPlanCard({
             </div>
             <div className="flex flex-col gap-y-6">
                 <p className="text-[20px] font-medium">This plan includes</p>
-                <ul className="flex w-full flex-col gap-y-4">
-                    <li className="flex gap-x-3">
+                <ul className="flex w-full flex-col gap-y-4 text-xs xs:text-[20px]">
+                    <li className="flex gap-x-3 items-center">
                         <CheckIcon /> <p>{aiGrade} AI-powered spend insights</p>
                     </li>
 
-                    <li className="flex gap-x-3">
+                    <li className="flex gap-x-3 items-center">
                         <CheckIcon /> Real-time cash flow tracking
                     </li>
-                    <li className="flex gap-x-3">
+                    <li className="flex gap-x-3 items-center">
                         <CheckIcon /> CSV/Excel export
                     </li>
-                    <li className="flex gap-x-3">
+                    <li className="flex gap-x-3 items-center">
                         <CheckIcon /> Email support
                     </li>
-                    <li className="flex gap-x-3">
+                    <li className="flex gap-x-3 items-center">
                         <CheckIcon /> {workspaceCount} workspace
                     </li>
-                    <li className="flex gap-x-3">
+                    <li className="flex gap-x-3 items-center">
                         <CheckIcon /> <p>{users} user seats</p>
                     </li>
                 </ul>

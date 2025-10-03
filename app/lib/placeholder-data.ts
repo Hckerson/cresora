@@ -166,14 +166,12 @@ const faqdata = [
     },
     {
         title: "Can I invite my team?",
-        subject:
-            "",
+        subject: "",
         link: "/",
     },
     {
         title: "What if I already use spreadsheets or other tools?",
-        subject:
-            "",
+        subject: "",
         link: "/",
     },
     {
@@ -184,24 +182,73 @@ const faqdata = [
     },
     {
         title: "Do I need to be a finance expert to use Cresora?",
-        subject:
-            "",
+        subject: "",
         link: "/",
     },
     {
         title: "Is my financial data safe?",
-        subject:
-            "",
+        subject: "",
         link: "/",
     },
 ];
 
+const medias = [
+    {
+        name: "behance",
+        src: "/svgs/BehanceLogo.svg",
+        link: "",
+    },
+    {
+        name: "instagram",
+        src: "/svgs/DribbbleLogo.svg",
+        link: "",
+    },
+    {
+        name: "twitter",
+        src: "/svgs/InstagramLogo.svg",
+        link: "",
+    },
+    {
+        name: "dribble",
+        src: "/svgs/XLogo.svg",
+        link: "",
+    },
+];
+
+const footerData = {
+    company: [
+        { name: "Home", link: "/" },
+        { name: "About", link: "/about" },
+        { name: "Pricing", link: "/pricing" },
+        { name: "Features", link: "/features" },
+        { name: "Contact", link: "/contact" },
+    ],
+    contactInformation: [
+        {
+            label: "Email",
+            value: "lelycaturhariyanto@gmail.com",
+            link: "mailto:lelycaturhariyanto@gmail.com",
+        },
+        {
+            label: "Phone",
+            value: "+62 899 3927 601",
+            link: "tel:+628993927601",
+        },
+        {
+            label: "Address",
+            value: "Malang City, East Java – Indonesian",
+            link: "https://maps.google.com/?q=Malang+City+East+Java+Indonesia",
+        },
+    ],
+};
 
 export {
     plans,
+    medias,
     faqdata,
     navLinks,
     features,
+    footerData,
     roundedImages,
     featureCardData,
     benefitCardData,
