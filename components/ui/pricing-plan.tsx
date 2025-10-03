@@ -34,7 +34,7 @@ export default function PricingPlanCard({
                 geist.className,
             )}
         >
-            <div className="flex flex-col gap-y-6 rounded-[12px] bg-[#FCFBFC] p-6">
+            <div className={clsx("flex flex-col gap-y-6 rounded-[12px] bg-[#FCFBFC] p-6", name == "Growth" && "bg-linear-to-b from-[#1763CC]/4 to-[#1763CC]/32")}>
                 <div className="flex flex-col gap-y-2">
                     <p className="text-foreground text-2xl leading-[1.32] font-medium">
                         {name}

@@ -26,7 +26,7 @@ export default function Navbar() {
           </Link>             
         ))}
       </div>
-      <Button variant="ghost" size="sm" visibility="md:block hidden">
+      <Button variant="ghost" size="lg" visibility="md:block hidden">
         Sign in
       </Button>
     </div>

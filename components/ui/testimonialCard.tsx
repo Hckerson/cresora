@@ -1,4 +1,4 @@
-import CustomImage from "../ui/custom-image";
+import CustomImage from "./custom-image";
 
 interface TestimonialCardProps {
     title: string;
@@ -20,9 +20,9 @@ export default function TestimonialCard({
     alt,
 }: TestimonialCardProps) {
     return (
-        <div className="bg-background box-border flex  flex-col justify-between lg:h-[310px] gap-y-6 rounded-3xl border border-[#E4E4E4] p-8">
+        <div className="bg-background box-border flex flex-col justify-between gap-y-6 rounded-3xl border border-[#E4E4E4] p-8 lg:h-[310px]">
             <div className="relative flex w-full">
-                <div className="box-border flex flex-col md:flex-row gap-y-3 flex-1 items-start gap-x-3">
+                <div className="box-border flex flex-1 flex-col items-start gap-x-3 gap-y-3 md:flex-row">
                     <CustomImage
                         height={100}
                         width={100}

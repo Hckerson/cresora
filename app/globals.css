@@ -92,6 +92,10 @@
     .paddy {
         @apply p-6 pt-6 md:p-12;
     }
+
+    .pady {
+        @apply py-12 md:py-24 lg:py-36
+    }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { geist } from "@/app/fonts";
-import BenefitCard from "./benefit-card";
+import BenefitCard from "../ui/benefit-card";
 import { benefitCardData } from "@/app/lib/placeholder-data";
 
 // email-template.types.ts
@@ -29,8 +29,8 @@ export default function Benefits() {
                     most.
                 </p>
             </span>
-            <div className="box-border grid ">
-                <div className="grid grid-cols-1 lg:grid-rows-2 gap-6 lg:grid-cols-5">
+            <div className="box-border grid">
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:grid-rows-2">
                     {benefitCardData.map((cardData, idx) => {
                         const { title, iconUrl, imageUrl, subject } = cardData;
                         const big = idx == 1 || idx == 2;
@@ -38,7 +38,7 @@ export default function Benefits() {
                             <div
                                 key={idx}
                                 className={clsx(
-                                    "box-border border border-[#E4E4E4] rounded-3xl",
+                                    "box-border rounded-3xl border border-[#E4E4E4]",
                                     big ? "lg:col-span-3" : "lg:col-span-2",
                                 )}
                             >

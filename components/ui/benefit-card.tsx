@@ -1,4 +1,4 @@
-import CustomImage from "../ui/custom-image";
+import CustomImage from "./custom-image";
 
 interface BenefitCardProps {
     title: string;
