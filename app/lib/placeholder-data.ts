@@ -242,6 +242,20 @@ const footerData = {
     ],
 };
 
+const homeFigures = [
+    {figure: '5K', symbol:"+", label:"Active Users"},
+    {figure: '2.5', symbol:"x", label:"Faster Reporting"},
+    {figure: '2K', symbol:"+", label:"Positive Reviews"},
+
+]
+
+const aboutFigures = [
+    {figure: '5K', symbol:"+", label:"Active Users"},
+    {figure: '2.5', symbol:"x", label:"Faster Reporting"},
+    {figure: '2K', symbol:"+", label:"Positive Reviews"},
+
+]
+
 export {
     plans,
     medias,
@@ -249,6 +263,8 @@ export {
     navLinks,
     features,
     footerData,
+    homeFigures,
+    aboutFigures,
     roundedImages,
     featureCardData,
     benefitCardData,

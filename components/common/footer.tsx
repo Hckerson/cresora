@@ -33,31 +33,31 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="grid w-fit md:grid-cols-2 gap-y-6">
-                        <ul className="flex lg:max-w-[200px] flex-col gap-y-6">
+                        <ul className="flex lg:max-w-[200px] flex-col gap-y-3 lg:gap-y-6">
                             <li className="font-semibold">Company</li>
                             {footerData.company.map((data, idx) => (
                                 <li key={idx}>
-                                    <Link href={data.link}>{data.name}</Link>
+                                    <Link className="lg:text-base text-sm" href={data.link}>{data.name}</Link>
                                 </li>
                             ))}
                         </ul>
-                        <ul className="flex flex-col gap-y-6">
+                        <ul className="flex flex-col gap-y-3 lg:gap-y-6">
                             <li className="font-semibold">Contact Information</li>
                             {footerData.contactInformation.map((data, idx) => (
                                 <li key={idx} className="flex flex-col gap-y-2">
-                                    <p>{data.label}</p>
-                                    <p>{data.value}</p>
+                                    <p className="lg:text-base text-sm" >{data.label}</p>
+                                    <p className="lg:text-sm text-xs" >{data.value}</p>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
-                <div className="buttom flex md:flex-row flex-col justify-between text-[18px]">
-                    <p className=" ">
+                <div className="buttom  flex md:flex-row flex-col justify-between text-[18px]">
+                    <p className="lg:text-base text-sm ">
                         © {new Date().getFullYear()} Cresora Inc. All Rights
                         Reserved
                     </p>
-                    <span className="flex md:flex-row flex-col gap-x-6">
+                    <span className="flex md:flex-row flex-col lg:text-base text-sm gap-x-6">
                         <p>
                             <Link className="" href={"/terms"}>
                                 Terms of Service
