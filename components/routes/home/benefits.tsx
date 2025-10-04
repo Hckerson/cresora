@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { geist } from "@/app/fonts";
-import BenefitCard from "../ui/benefit-card";
+import BenefitCard from "@/components/ui/benefit-card";
 import { benefitCardData } from "@/app/lib/placeholder-data";
 
 // email-template.types.ts

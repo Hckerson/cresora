@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import Blank from "./blank";
 import Image from "next/image";
-import Button from "../common/button";
 import { geist, atkinson } from "@/app/fonts";
+import Button from "@/components/common/button";
 import { roundedImages } from "@/app/lib/placeholder-data";
 
 export default function HeroSection() {

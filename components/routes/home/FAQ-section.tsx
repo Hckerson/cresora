@@ -1,15 +1,15 @@
 "use client";
 import clsx from "clsx";
 import Link from "next/link";
-import Button from "../common/button";
-import Description from "../ui/description";
-import Trigger from "../ui/collapsible-trigger";
+import Button from "@/components/common/button";
 import { faqdata } from "@/app/lib/placeholder-data";
+import Description from "@/components/ui/description";
+import Trigger from "@/components/ui/collapsible-trigger";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
-} from "../ui/collapsible";
+} from "@/components/ui/collapsible";
 import { useState } from "react";
 
 export default function FAQ() {

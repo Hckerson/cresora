@@ -1,4 +1,4 @@
-import CustomImage from "../ui/custom-image";
+import CustomImage from "@/components/ui/custom-image";
 
 export default function Blank() {
     return (

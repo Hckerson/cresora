@@ -8,10 +8,10 @@ import {
     CollapsibleContent,
     CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import FeatureCard from "../ui/feature-card";
-import CustomImage from "../ui/custom-image";
-import Trigger from "../ui/collapsible-trigger";
 import { features } from "@/app/lib/placeholder-data";
+import CustomImage from "@/components/ui/custom-image";
+import FeatureCard from "@/components/ui/feature-card";
+import Trigger from "@/components/ui/collapsible-trigger";
 import { featureCardData } from "@/app/lib/placeholder-data";
 
 export default function Features() {

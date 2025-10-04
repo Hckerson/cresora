@@ -1,5 +1,5 @@
-import Description from "../ui/description";
-import Carousel from "../ui/testimonial-carousel";
+import Description from "@/components/ui/description";
+import Carousel from "@/components/ui/testimonial-carousel";
 
 export default function Testimonial() {
     return (

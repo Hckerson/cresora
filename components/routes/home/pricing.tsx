@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Description from "../ui/description";
-import PricingPlanCard from "../ui/pricing-card";
 import { plans } from "@/app/lib/placeholder-data";
+import Description from "@/components/ui/description";
+import PricingPlanCard from "@/components/ui/pricing-card";
 
 export default function Pricing() {
     const [planName, setPlanName] = useState<"month" | "year">("month");
