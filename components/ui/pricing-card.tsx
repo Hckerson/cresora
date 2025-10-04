@@ -65,7 +65,7 @@ export default function PricingPlanCard({
             </div>
             <div className="flex flex-col gap-y-6">
                 <p className="text-[20px] font-medium">This plan includes</p>
-                <ul className="flex w-full flex-col gap-y-4 text-xs xs:text-[20px]">
+                <ul className="flex w-full flex-col gap-y-4 text-xs md:text-[12px] xl:text-[18px]">
                     <li className="flex gap-x-3 items-center">
                         <CheckIcon /> <p>{aiGrade} AI-powered spend insights</p>
                     </li>

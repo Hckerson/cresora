@@ -20,7 +20,7 @@ export default function Benefits() {
             )}
         >
             <span className="mx-auto box-border">
-                <p className="text-foreground text-center text-[30px] leading-[1.24] font-medium md:text-[42px] xl:text-[62px]">
+                <p className="text-foreground pb-3 text-center text-[20px] leading-[1.24] font-medium md:text-[42px] xl:text-[62px]">
                     Clarity and Control Financial Move
                 </p>
                 <p className="text-primary-foreground text-center text-xs">

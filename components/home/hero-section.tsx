@@ -7,7 +7,7 @@ import { roundedImages } from "@/app/lib/placeholder-data";
 
 export default function HeroSection() {
   return (
-    <div className="grid grid-cols-1 gap-y-[72px] px-6 pt-[93px] md:px-12">
+    <div className="grid grid-cols-1 gap-y-[72px] px-6 pt-[98px] md:px-12">
       <div className="flex w-full flex-col lg:flex-row">
         <div className="flex flex-1 flex-col gap-y-[24px]">
           <div className="xs:h-7 xs:w-fit box-border flex w-[264px] items-center justify-center rounded-[2px] bg-[#FAB12C]/16 p-1">
@@ -22,7 +22,7 @@ export default function HeroSection() {
           </div>
           <div
             className={clsx(
-              "xs:text-[62px] xs:text-start flex flex-col gap-y-6 text-center text-[35px] leading-[1.24] text-[#030E1F] md:text-[72px]",
+              "md:text-[62px] xs:text-start flex flex-col gap-y-6 text-center text-[25px] leading-[1.24] text-[#030E1F] xl:text-[72px]",
               geist.className,
             )}
           >

@@ -17,7 +17,7 @@ export default function Description({
         <span className="mx-auto box-border flex items-center flex-col">
             <p
                 className={clsx(
-                    "text-foreground text-center text-[30px] leading-[1.24] font-medium md:text-[42px] xl:text-[62px]",
+                    "text-foreground text-center text-[20px] leading-[1.24] font-medium md:text-[42px] xl:text-[62px]",
                     classT,
                 )}
             >

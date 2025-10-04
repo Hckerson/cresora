@@ -28,7 +28,7 @@ export default function Button({
         "rounded-[8px] xl:w-[160px] w-[120px] h-[42px] lg:h-[56px] ": small,
         "rounded-[12px] xl:w-[200px] h-[42px] w-[150px] lg:h-[56px]":
             size == "lg",
-        "rounded-[12px]  lg:h-[46px]": size = "custom",
+        "rounded-[12px]  lg:h-[46px]": (size = "custom"),
     };
     return (
         <button
@@ -46,7 +46,7 @@ export default function Button({
                 ) : (
                     <p
                         className={clsx(
-                            "flex items-center justify-center transition-colors duration-150 ease-in",
+                            "xs:text-base flex items-center justify-center text-sm transition-colors duration-150 ease-in",
                             style,
                         )}
                     >
@@ -66,7 +66,7 @@ export default function Button({
                             <Loader2 className="relative flex size-6 animate-spin items-center justify-center" />
                         </span>
                     )}
-                    <p className="flex h-full w-full items-center justify-center">
+                    <p className="xs:text-base flex h-full w-full items-center justify-center text-sm">
                         {children}
                     </p>
                 </div>
