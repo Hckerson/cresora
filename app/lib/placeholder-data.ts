@@ -250,9 +250,9 @@ const homeFigures = [
 ]
 
 const aboutFigures = [
-    {figure: '5K', symbol:"+", label:"Active Users"},
-    {figure: '2.5', symbol:"x", label:"Faster Reporting"},
-    {figure: '2K', symbol:"+", label:"Positive Reviews"},
+    {figure: '100', symbol:"+", label:"Active Users"},
+    {figure: '1K', symbol:"+    ", label:"Payment Tracked"},
+    {figure: '8K', symbol:"+", label:"Managed by cresora"},
 
 ]
 

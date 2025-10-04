@@ -4,7 +4,7 @@ import { homeFigures } from "./lib/placeholder-data";
 import Pricing from "@/components/routes/home/pricing";
 import FAQ from "@/components/routes/home/FAQ-section";
 import Benefits from "@/components/routes/home/benefits";
-import Keypoint from "@/components/routes/home/keypoint";
+import Keypoint from "@/components/ui/keypoint";
 import Testimonial from "@/components/routes/home/testimonial";
 import Features from "@/components/routes/home/feature-section";
 import HeroSection from "@/components/routes/home/hero-section";

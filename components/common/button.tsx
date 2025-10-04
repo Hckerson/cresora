@@ -28,7 +28,7 @@ export default function Button({
         "rounded-[8px] xl:w-[160px] w-[120px] h-[42px] lg:h-[56px] ": small,
         "rounded-[12px] xl:w-[200px] h-[42px] w-[150px] lg:h-[56px]":
             size == "lg",
-        "rounded-[12px]  lg:h-[46px]": (size = "custom"),
+        "rounded-[12px] h-[36px]  lg:h-[46px]": (size = "custom"),
     };
     return (
         <button
@@ -46,7 +46,7 @@ export default function Button({
                 ) : (
                     <p
                         className={clsx(
-                            "xs:text-base flex items-center justify-center text-sm transition-colors duration-150 ease-in",
+                            "xs:text-base absolute inset-0 flex items-center justify-center text-sm transition-colors duration-150 ease-in",
                             style,
                         )}
                     >

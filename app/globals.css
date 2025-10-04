@@ -94,7 +94,10 @@
     }
 
     .pady {
-        @apply py-12 md:py-24 lg:py-36
+        @apply py-12 md:py-24 lg:py-36;
+    }
+    .texty {
+        @apply text-[25px] md:text-[62px] xl:text-[72px];
     }
 }
 
