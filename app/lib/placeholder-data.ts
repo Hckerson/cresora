@@ -287,6 +287,31 @@ const rightFrameData = [
     },
 ];
 
+const principleCardData= [
+  {
+    alt: "Founder-Focused Icon",
+    iconUrl: "/svgs/UsersThree.svg",
+    title: "Founder-Focused",
+    subject:
+      "Built by founders, for founders. We solve the real financial problems that we’ve faced ourselves.",
+  },
+  {
+    alt: "Clarity Above All Icon",
+    iconUrl: "/svgs/ListBullets.svg",
+    title: "Clarity Above All",
+    subject:
+      "We are obsessed with turning financial complexity into simple, actionable insights.",
+  },
+  {
+    alt: "Trusted Partnership Icon",
+    iconUrl: "/svgs/UserSound.svg",
+    title: "Trusted Partnership",
+    subject:
+      "Your trust is our priority. We are committed to the highest standards of security.",
+  },
+];
+
+
 export {
     plans,
     medias,
@@ -301,5 +326,6 @@ export {
     rightFrameData,
     featureCardData,
     benefitCardData,
+    principleCardData,
     testimonialCardData,
 };

@@ -23,7 +23,7 @@ a stable, thriving company."
                     Contact Us
                 </Button>
             </div>
-            <div className="grid grid-cols-[20%_55%_20%] justify-center gap-6 pt-18">
+            <div className="grid grid-cols-1 xl:grid-cols-[20%_55%_20%] justify-center gap-6 pt-18">
                 <Frame data={leftFrameData} />
                 <CustomImage
                     height={1300}
