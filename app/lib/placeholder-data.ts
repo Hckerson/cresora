@@ -243,18 +243,49 @@ const footerData = {
 };
 
 const homeFigures = [
-    {figure: '5K', symbol:"+", label:"Active Users"},
-    {figure: '2.5', symbol:"x", label:"Faster Reporting"},
-    {figure: '2K', symbol:"+", label:"Positive Reviews"},
-
-]
+    { figure: "5K", symbol: "+", label: "Active Users" },
+    { figure: "2.5", symbol: "x", label: "Faster Reporting" },
+    { figure: "2K", symbol: "+", label: "Positive Reviews" },
+];
 
 const aboutFigures = [
-    {figure: '100', symbol:"+", label:"Active Users"},
-    {figure: '1K', symbol:"+    ", label:"Payment Tracked"},
-    {figure: '8K', symbol:"+", label:"Managed by cresora"},
+    { figure: "100", symbol: "+", label: "Active Users" },
+    { figure: "1K", symbol: "+    ", label: "Payment Tracked" },
+    { figure: "8K", symbol: "+", label: "Managed by cresora" },
+];
 
-]
+const leftFrameData = [
+    {
+        name: "Income",
+        value: "$12,241",
+        amount: "$518",
+        action: "You get this month",
+        percentage: "+1%",
+    },
+    {
+        name: "Expense",
+        value: "$8,432",
+        amount: "$312",
+        action: "You spent this month",
+        percentage: "-2%",
+    },
+];
+const rightFrameData = [
+    {
+        name: "Savings",
+        value: "$3,500",
+        amount: "$200",
+        action: "You saved this month",
+        percentage: "+5%",
+    },
+    {
+        name: "Investments",
+        value: "$15,820",
+        amount: "$600",
+        action: "Growth this month",
+        percentage: "+3%",
+    },
+];
 
 export {
     plans,
@@ -266,6 +297,8 @@ export {
     homeFigures,
     aboutFigures,
     roundedImages,
+    leftFrameData,
+    rightFrameData,
     featureCardData,
     benefitCardData,
     testimonialCardData,

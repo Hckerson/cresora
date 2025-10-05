@@ -5,6 +5,7 @@ import Hightlight from "@/components/ui/highlight";
 import Description from "@/components/ui/description";
 import CustomImage from "@/components/ui/custom-image";
 import { aboutFigures } from "@/app/lib/placeholder-data";
+import { leftFrameData, rightFrameData } from "@/app/lib/placeholder-data";
 
 export default function Hero() {
     return (
@@ -22,16 +23,17 @@ a stable, thriving company."
                     Contact Us
                 </Button>
             </div>
-            <div className="grid grid-cols-[20%_60%_20%] gap-6 pt-18">
-                <Frame />
+            <div className="grid grid-cols-[20%_55%_20%] justify-center gap-6 pt-18">
+                <Frame data={leftFrameData} />
                 <CustomImage
                     height={1300}
                     width={2000}
                     alt="Financial workers collaborating"
                     src="/images/lcd.jpg"
-                    classes="rounded-3xl"
+                    classes="rounded-3xl h-full"
+                    boxClass="max-h-[422px]"
                 />
-                <Frame />
+                <Frame data={rightFrameData} />
             </div>
             <div className="py-12">
                 <Points data={aboutFigures} />
