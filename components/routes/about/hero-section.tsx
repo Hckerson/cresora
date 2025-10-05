@@ -9,7 +9,7 @@ import { leftFrameData, rightFrameData } from "@/app/lib/placeholder-data";
 
 export default function Hero() {
     return (
-        <div className="paddy mt-[98px] pt-12">
+        <div className="paddy mt-[98px] pt-12 xl:w-[1480px] mx-auto">
             <div className="flexy flex-col">
                 <Hightlight />
                 <Description
@@ -23,7 +23,7 @@ a stable, thriving company."
                     Contact Us
                 </Button>
             </div>
-            <div className="grid grid-cols-1 xl:grid-cols-[20%_55%_20%] justify-center gap-6 pt-18">
+            <div className="grid grid-cols-1 justify-center gap-6 pt-18 xl:grid-cols-[20%_55%_20%]">
                 <Frame data={leftFrameData} />
                 <CustomImage
                     height={1300}
@@ -35,9 +35,7 @@ a stable, thriving company."
                 />
                 <Frame data={rightFrameData} />
             </div>
-            <div className="py-12">
-                <Points data={aboutFigures} />
-            </div>
+            <Points data={aboutFigures} />
         </div>
     );
 }

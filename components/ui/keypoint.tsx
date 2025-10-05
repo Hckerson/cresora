@@ -15,7 +15,7 @@ export default function Points({ data }: { data: PointProps[] }) {
                     <p
                         className={clsx(
                             geist.className,
-                            "text-foreground text-[32px] leading-[1.24] font-medium md:text-[62px] xl:text-[72px]",
+                            "text-foreground text-[32px] leading-[1.24] font-medium md:text-[52px] xl:text-[62px]",
                         )}
                     >
                         {datum.figure}

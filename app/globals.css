@@ -82,6 +82,7 @@
 
 @theme {
     --breakpoint-xs: 480px;
+    --breakpoint-3xl: 1800px;
 }
 
 @layer components {
@@ -90,11 +91,11 @@
     }
 
     .paddy {
-        @apply p-6 pt-6 md:p-12;
+        @apply p-6 pt-6 xl:p-12;
     }
 
     .pady {
-        @apply py-12 md:py-24 lg:py-36;
+        @apply px-6 py-12 md:px-12 md:py-24 lg:py-36;
     }
     .texty {
         @apply text-[25px] md:text-[62px] xl:text-[72px];

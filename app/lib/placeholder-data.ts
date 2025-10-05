@@ -311,6 +311,46 @@ const principleCardData= [
   },
 ];
 
+const personnelData = [
+  {
+    name: "Wilson Dorwart",
+    role: "Founder & CEO",
+    imgSrc: "/images/wilson.png",
+    link: "/images/wilson-dorwart",
+  },
+  {
+    name: "Cristofer Lubin",
+    role: "CTO",
+    imgSrc: "/images/cristofer.png",
+    link: "/images/cristofer-lubin",
+  },
+  {
+    name: "Jordyn Dias",
+    role: "Human Resources",
+    imgSrc: "/images/jordyn.png",
+    link: "/images/jordyn-dias",
+  },
+  {
+    name: "Davis Culhane",
+    role: "images Lead",
+    imgSrc: "/images/davis.png",
+    link: "/images/davis-culhane",
+  },
+  {
+    name: "Rayna Lubin",
+    role: "images Lead",
+    imgSrc: "/images/rayna.png",
+    link: "/images/rayna-lubin",
+  },
+  {
+    name: "Marcus Schleifer",
+    role: "images Lead",
+    imgSrc: "/images/marcus.png",
+    link: "/images/marcus-schleifer",
+  },
+];
+
+
 
 export {
     plans,
@@ -323,6 +363,7 @@ export {
     aboutFigures,
     roundedImages,
     leftFrameData,
+    personnelData,
     rightFrameData,
     featureCardData,
     benefitCardData,

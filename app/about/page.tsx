@@ -1,6 +1,7 @@
 import Navbar from "@/components/common/navbar";
 import Hero from "@/components/routes/about/hero-section";
 import Principle from "@/components/routes/about/principle-section";
+import Personnel from "@/components/routes/about/personnel-section";
 
 export default function About() {
     return (
@@ -8,6 +9,7 @@ export default function About() {
             <Navbar/>
             <Hero/>
             <Principle/>
+            <Personnel/>
         </div>
     );
 }

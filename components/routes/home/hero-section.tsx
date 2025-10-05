@@ -7,7 +7,7 @@ import { roundedImages } from "@/app/lib/placeholder-data";
 
 export default function HeroSection() {
     return (
-        <div className="grid grid-cols-1 gap-y-[72px] px-6 pt-[98px] md:px-12">
+        <div className="grid grid-cols-1 gap-y-[72px] px-6 pt-[98px] md:px-12 3xl:text-base 3xl:w-[1480px] mx-auto">
             <div className="flex w-full flex-col lg:flex-row">
                 <div className="flex flex-1 flex-col gap-y-[24px]">
                     <div className="xs:h-7 xs:w-fit box-border flex w-[264px] items-center justify-center rounded-[2px] bg-[#FAB12C]/16 p-1">
