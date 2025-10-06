@@ -22,7 +22,7 @@ export default function HeroSection() {
                     </div>
                     <div
                         className={clsx(
-                            "xs:text-start flex flex-col gap-y-6 text-center text-[25px] leading-[1.24] text-[#030E1F] md:text-[62px] xl:text-[72px]",
+                            "xs:text-start flex flex-col gap-y-6 text-center text-[25px] leading-[1.24] text-[#030E1F] md:text-[52px] xl:text-[72px]",
                             geist.className,
                         )}
                     >

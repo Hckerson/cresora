@@ -15,7 +15,7 @@ export default function Benefits() {
     return (
         <div
             className={clsx(
-                "paddy flex flex-col gap-y-12 pt-12 md:py-24 lg:pt-32",
+                "paddy flex flex-col gap-y-12 pt-12 md:py-24 lg:pt-32 3xl:w-[1480px] mx-auto",
                 geist.className,
             )}
         >

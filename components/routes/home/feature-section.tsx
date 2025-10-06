@@ -19,7 +19,7 @@ export default function Features() {
     return (
         <div
             className={clsx(
-                "paddy xs:flex hidden flex-col gap-y-16 py-[144px]",
+                "paddy xs:flex hidden flex-col gap-y-16 py-[144px] 3xl:w-[1480px] mx-auto",
                 geist.className,
             )}
         >

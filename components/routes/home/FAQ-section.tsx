@@ -15,7 +15,7 @@ import { useState } from "react";
 export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
     return (
-        <div className="paddy pady">
+        <div className="paddy pady 3xl:w-[1480px] mx-auto">
             <Description
                 title="You’re Not the First to Ask"
                 description="We built Cresora to be clear and easy, and we think your questions should be too"

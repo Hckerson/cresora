@@ -9,7 +9,7 @@ interface PointProps {
 
 export default function Points({ data }: { data: PointProps[] }) {
     return (
-        <div className="relative box-border paddy flex w-full flex-col items-center justify-between gap-y-6 pb-18 md:flex-row">
+        <div className="relative box-border paddy flex w-full flex-col items-center justify-between gap-y-6 pb-18 md:flex-row 3xl:w-[1480px] mx-auto">
             {data.map((datum, idx) => (
                 <div className="flex flex-col items-center gap-y-0.5" key={idx}>
                     <p
