@@ -4,7 +4,7 @@ import { principleCardData } from "@/app/lib/placeholder-data";
 
 export default function Principle() {
     return (
-        <div className="pady flexy flex-col py-6 px-6 md:px-12">
+        <div className="pady flexy flex-col  px-6 md:px-12">
             <Description
                 title="The Principles That Guide Us"
                 description="Our commitment to building a better way for businesses to manage their finances"
