@@ -15,11 +15,11 @@ export default function CTA() {
                     />
                     <Button size="sm">Contact Us</Button>
                 </div>
-                <div className="bg-gradient-to-b from-[#1763CC]/4 rounded-b-3xl to-[#1763CC]/32 p-12 pb-0">
+                <div className="bg-gradient-to-b from-[#1763CC]/4 rounded-b-[23px] to-[#1763CC]/32 p-5 pb-0   md:p-6 md:pb-0 xl:p-12 xl:pb-0">
                     <div className="rounded-t-2xl overflow-hidden">
                         <CustomImage
-                            boxClass="h-[500px]"
-                            classes="h-full bg-cover"
+                            boxClass="lg:h-[500px] "
+                            classes="h-full"
                             alt="Coins"
                             height={1596}
                             width={2400}
