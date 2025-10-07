@@ -6,7 +6,7 @@ import { footerData } from "@/app/lib/placeholder-data";
 
 export default function Footer() {
     return (
-        <div className="paddy pad-y pb-0 text-[18px]">
+        <div className="paddy pad-y pb-0 text-[18px] 3xl:w-[1480px] mx-auto">
             <div className="flex h-full w-full flex-col gap-y-12">
                 <div className="relative flex flex-col justify-between gap-y-6 lg:h-[264px] lg:flex-row">
                     <div className="flex h-full flex-col justify-between text-[18px]">
