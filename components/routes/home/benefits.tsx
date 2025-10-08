@@ -11,7 +11,7 @@ export interface BenefitCardProps {
     imageUrl: string;
 }
 
-export default function Benefits() {
+export default function BenefitSection() {
     return (
         <div
             className={clsx(
@@ -19,6 +19,7 @@ export default function Benefits() {
                 geist.className,
             )}
         >
+            
             <span className="mx-auto box-border">
                 <p className="text-foreground pb-3 text-center text-[20px] leading-[1.24] font-medium md:text-[42px] xl:text-[62px]">
                     Clarity and Control Financial Move

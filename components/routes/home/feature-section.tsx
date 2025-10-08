@@ -14,7 +14,7 @@ import FeatureCard from "@/components/ui/feature-card";
 import Trigger from "@/components/ui/collapsible-trigger";
 import { featureCardData } from "@/app/lib/placeholder-data";
 
-export default function Features() {
+export default function FeatureSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
     return (
         <div

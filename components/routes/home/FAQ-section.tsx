@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/collapsible";
 import { useState } from "react";
 
-export default function FAQ() {
+export default function FAQSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
     return (
         <div className="paddy pady 3xl:w-[1480px] mx-auto">

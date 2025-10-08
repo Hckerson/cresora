@@ -4,7 +4,7 @@ import { plans } from "@/app/lib/placeholder-data";
 import Description from "@/components/ui/description";
 import PricingPlanCard from "@/components/ui/pricing-card";
 
-export default function Pricing() {
+export default function PricingSection() {
     const [planName, setPlanName] = useState<"month" | "year">("month");
     return (
         <div className="paddy py-12 md:py-24 xl:py-32">

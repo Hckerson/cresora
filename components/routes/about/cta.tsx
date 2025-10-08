@@ -3,7 +3,7 @@ import Hightlight from "@/components/ui/highlight";
 import Description from "@/components/ui/description";
 import CustomImage from "@/components/ui/custom-image";
 
-export default function CTA() {
+export default function CTASection() {
     return (
         <div className="3xl:w-[1480px] paddy mx-auto">
             <div className="flexy flex-col rounded-3xl border border-[#E4E4E4] py-18 pb-0">

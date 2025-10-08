@@ -1,7 +1,7 @@
 import Description from "@/components/ui/description";
 import Carousel from "@/components/ui/testimonial-carousel";
 
-export default function Testimonial() {
+export default function TestimonialSection() {
     return (
         <div className="flexy grid gap-y-12 py-12 md:py-24 3xl:w-[1480px] mx-auto">
             <Description

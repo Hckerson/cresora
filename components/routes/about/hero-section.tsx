@@ -7,7 +7,7 @@ import CustomImage from "@/components/ui/custom-image";
 import { aboutFigures } from "@/app/lib/placeholder-data";
 import { leftFrameData, rightFrameData } from "@/app/lib/placeholder-data";
 
-export default function Hero() {
+export default function HeroSection() {
     return (
         <div className="paddy mt-[98px] pt-12 3xl:w-[1480px] mx-auto">
             <div className="flexy flex-col">

@@ -4,7 +4,7 @@ import Description from "@/components/ui/description";
 import PersonnelCard from "@/components/ui/personnelCard";
 import { personnelData } from "@/app/lib/placeholder-data";
 
-export default function Personnel() {
+export default function PersonnelSection() {
     return (
         <div className="pady flexy box-border flex-col gap-y-12 py-0 md:py-0 lg:py-0">
             <Description

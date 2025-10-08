@@ -2,7 +2,7 @@ import Description from "@/components/ui/description";
 import PrincipleCard from "@/components/ui/principle-card";
 import { principleCardData } from "@/app/lib/placeholder-data";
 
-export default function Principle() {
+export default function PrincipleSection() {
     return (
         <div className="pady flexy flex-col  px-6 md:px-12">
             <Description
