@@ -27,7 +27,7 @@ export default function MovingDot() {
         backgroundColor: 'red',
         borderRadius: '50%',
         transform: `translate(${position.x}px, ${position.y}px)`,
-        left: -30,
+        left: -10,
         top: -10,
         width: 20,
         height: 20,

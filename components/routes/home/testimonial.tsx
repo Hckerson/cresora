@@ -3,7 +3,7 @@ import Carousel from "@/components/ui/testimonial-carousel";
 
 export default function TestimonialSection() {
     return (
-        <div className="flexy grid gap-y-12 py-12 md:py-24 3xl:w-[1480px] mx-auto">
+        <div className="flexy grid gap-y-12 py-12 md:py-24  3xl:w-[1480px] mx-auto">
             <Description
                 title="Trusted by Professionals"
                 description="Across industries and team sizes, Cresora gives growing companies a simpler, smarter way to manage finances."

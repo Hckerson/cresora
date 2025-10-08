@@ -4,7 +4,7 @@ import { pricingFeaturesData } from "@/app/lib/placeholder-data";
 
 export default function PricingTable() {
     return (
-        <div className="paddy flexy 3xl:max-w-[1480px] mx-auto flex-col gap-y-12">
+        <div className="paddy flexy 3xl:max-w-[1480px] mx-auto flex-col gap-y-12 ">
             <Description
                 title="Compare Plans"
                 description="Choose the right plan for your business, whatever your stage of growth."

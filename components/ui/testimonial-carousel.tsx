@@ -7,13 +7,13 @@ import { testimonialCardData } from "@/app/lib/placeholder-data";
 export default function Carousel() {
     return (
         <Swiper
-            className="w-[calc(100%-50px)] xl:w-[calc(100%-150px)]"
+            className="w-[calc(100%-50px)]"
             spaceBetween={25}
             onSwiper={(swiper) => console.log(swiper)}
             breakpoints={{
-                320: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1280: { slidesPerView: 3 },
+                320: { slidesPerView: 1.5 },
+                768: { slidesPerView: 2.5 },
+                1280: { slidesPerView: 3.5 },
             }}
         >
             {testimonialCardData.map((cardData, index) => (
