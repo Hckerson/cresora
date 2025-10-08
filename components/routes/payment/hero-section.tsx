@@ -12,8 +12,7 @@ export default function HeroSection() {
                     classT="max-w-[25ch]"
                     description="All the features you need, with pricing that makes sense."
                 />
-                <PricingPlan/>
-                
+                <PricingPlan />
             </div>
         </div>
     );

@@ -149,12 +149,16 @@ body {
     --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* styles.css */
 
-.left {
-    left: min(calc(100% - 110px));
+/* 
+* table styling
+*/
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
-.right {
-    right: min(calc(100% - 110px));
+td, th {
+  padding: 0.5rem;
 }

@@ -350,6 +350,90 @@ const personnelData = [
   },
 ];
 
+const pricingFeaturesData = [
+  {
+    name: "Price",
+    data: {
+      starter: "$0.00",
+      growth: "$29.00",
+      scale: "$79.00",
+    },
+  },
+  {
+    name: "Number of Users",
+    data: {
+      starter: "5 Users",
+      growth: "12 Users",
+      scale: "Unlimited",
+    },
+  },
+  {
+    name: "AI-Powered Insights & Alerts",
+    data: {
+      starter: "Simple",
+      growth: "Pro",
+      scale: "Pro",
+    },
+  },
+  {
+    name: "Workspace",
+    data: {
+      starter: "1 Workspace",
+      growth: "12 Workspaces",
+      scale: "Unlimited",
+    },
+  },
+  {
+    name: "Cash Flow Tracking",
+    data: {
+      starter: true,
+      growth: true,
+      scale: true,
+    },
+  },
+  {
+    name: "Expense Management",
+    data: {
+      starter: true,
+      growth: true,
+      scale: true,
+    },
+  },
+  {
+    name: "Budgeting & Goal Tracking",
+    data: {
+      starter: false,
+      growth: true,
+      scale: true,
+    },
+  },
+  {
+    name: "Transaction Approval Workflows",
+    data: {
+      starter: false,
+      growth: true,
+      scale: true,
+    },
+  },
+  {
+    name: "Scenario Planning & Forecasting",
+    data: {
+      starter: false,
+      growth: false,
+      scale: true,
+    },
+  },
+  {
+    name: "Executive Support",
+    data: {
+      starter: false,
+      growth: false,
+      scale: true,
+    },
+  },
+];
+
+
 
 
 export {
@@ -369,4 +453,5 @@ export {
     benefitCardData,
     principleCardData,
     testimonialCardData,
+    pricingFeaturesData,
 };
