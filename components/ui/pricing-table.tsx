@@ -11,7 +11,7 @@ export default function PricingTable() {
             />
             <table
                 style={{ borderRadius: 30 }}
-                className="box-border hidden max-w-[1280px] border-collapse border border-gray-300 md:table"
+                className="box-border hidden xl:w-[1280px] border-collapse border border-gray-300 md:table"
             >
                 <thead className="">
                     <tr className="h-[54px] md:h-[75px] xl:h-[96px]">

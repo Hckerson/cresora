@@ -1,7 +1,7 @@
 "use client";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import TestimonialCard from "./testimonialCard";
+import TestimonialCard from "./testimonial-card";
 import { testimonialCardData } from "@/app/lib/placeholder-data";
 
 export default function Carousel() {

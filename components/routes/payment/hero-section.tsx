@@ -1,5 +1,5 @@
 import Hightlight from "@/components/ui/highlight";
-import PricingPlan from "@/components/ui/pricingPlan";
+import PricingPlan from "@/components/ui/pricing-plan";
 import Description from "@/components/ui/description";
 
 export default function HeroSection() {

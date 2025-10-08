@@ -1,6 +1,6 @@
 import Navbar from "@/components/common/navbar"
 import CTASection from "@/components/routes/about/cta"
-import PricingTable from "@/components/ui/pricingTable"
+import PricingTable from "@/components/ui/pricing-table"
 import HeroSection from "@/components/routes/payment/hero-section"
 import TestimonialSection from "@/components/routes/home/testimonial"
 

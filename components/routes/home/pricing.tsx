@@ -1,5 +1,5 @@
 import Description from "@/components/ui/description";
-import PricingPlan from "@/components/ui/pricingPlan";
+import PricingPlan from "@/components/ui/pricing-plan";
 
 export default function PricingSection() {
     return (
