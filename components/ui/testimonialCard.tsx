@@ -20,7 +20,7 @@ export default function TestimonialCard({
     alt,
 }: TestimonialCardProps) {
     return (
-        <div className="bg-background box-border flex flex-col justify-between gap-y-6 rounded-3xl border border-[#E4E4E4] p-5 md:p-8 lg:h-[310px]">
+        <div className="bg-background box-border flex flex-col justify-between gap-y-6 rounded-3xl border border-[#E4E4E4] p-3 xs:p-5 md:p-8 lg:h-[310px]">
             <div className="relative flex w-full">
                 <div className="box-border flex flex-1 flex-col items-start gap-x-3 gap-y-3 md:flex-row">
                     <CustomImage
@@ -32,7 +32,7 @@ export default function TestimonialCard({
                         src={avatarSrc}
                     />
                     <div className="flex flex-col">
-                        <p className="text-foreground text-[12px] md:text-[18px] leading-[1.24] font-medium md:text-2xl">
+                        <p className="text-foreground text-[12px] leading-[1.24] font-medium md:text-2xl md:text-[18px]">
                             {name}
                         </p>
                         <p className="text-primary-foreground text-xs md:text-sm">
@@ -43,7 +43,7 @@ export default function TestimonialCard({
                 <CustomImage
                     height={100}
                     width={100}
-                    boxClass="size-[36px] md:size-[56px]   rounded-full bg-linear-to-r from-[#FEEAC1] to-[#FEC247] p-3"
+                    boxClass="size-[36px] md:size-[56px]   rounded-full bg-linear-to-r from-[#FEEAC1] to-[#FEC247] p-1.5 md:p-3"
                     alt={alt}
                     src={iconSrc}
                 />
@@ -57,8 +57,8 @@ export default function TestimonialCard({
                     classes=""
                     src={"/images/stars.png"}
                 />
-                <div className="span flex flex-col gap-y-3 md:gap-y-6 pt-4">
-                    <p className="text-foreground md:text-[16px] text-[12px] lg:text-[20px] leading-[1.24] md:text-2xl">
+                <div className="span flex flex-col gap-y-3 pt-4 md:gap-y-6">
+                    <p className="text-foreground text-[12px] leading-[1.24] md:text-2xl md:text-[16px] lg:text-[20px]">
                         {title}
                     </p>
                     <p className="text-primary-foreground text-xs md:text-sm">

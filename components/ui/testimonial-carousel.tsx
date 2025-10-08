@@ -8,13 +8,13 @@ export default function Carousel() {
     return (
         <Swiper
             className="w-[calc(100%-50px)]"
-            spaceBetween={25}
             onSwiper={(swiper) => console.log(swiper)}
             breakpoints={{
-                320: { slidesPerView: 1.5 },
-                768: { slidesPerView: 2.5 },
-                1280: { slidesPerView: 3.5 },
+                320: { slidesPerView: 1, spaceBetween: 10 },
+                768: { slidesPerView: 2.5, spaceBetween: 15 },
+                1280: { slidesPerView: 3.5, spaceBetween: 20 },
             }}
+            freeMode={true}
         >
             {testimonialCardData.map((cardData, index) => (
                 <SwiperSlide className="">

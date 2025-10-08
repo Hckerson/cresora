@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react';
 
 export default function MovingDot() {
@@ -27,8 +28,8 @@ export default function MovingDot() {
         backgroundColor: 'red',
         borderRadius: '50%',
         transform: `translate(${position.x}px, ${position.y}px)`,
-        left: -10,
-        top: -10,
+        left: -15,
+        top: -15,
         width: 20,
         height: 20,
       }} />
