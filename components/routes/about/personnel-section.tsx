@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Button from "@/components/common/button";
 import Description from "@/components/ui/description";
-import PersonnelCard from "@/components/ui/personnelCard";
+import PersonnelCard from "@/components/ui/personnel-card";
 import { personnelData } from "@/app/lib/placeholder-data";
 
 export default function PersonnelSection() {
