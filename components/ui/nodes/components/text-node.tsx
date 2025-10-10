@@ -6,7 +6,7 @@ type side = "left" | "right" | "top" | "bottom";
 type TextNodeProps = Node<
     {
         label: string;
-        side: [side];
+        side: [{ pos: side; id: string; type: "source" | "target" }];
     },
     "text"
 >;
@@ -18,21 +18,20 @@ export default function TextNode(props: NodeProps<TextNodeProps>) {
                 <p>{props.data?.label}</p>
             </div>
             {props.data.side.map((side, idx) => {
-                const pos = {
-                    left: Position.Left,
-                    right: Position.Right,
-                    top: Position.Top,
-                    bottom: Position.Bottom,
-                };
                 return (
                     <Handle
                         key={idx}
-                        type={
-                            side == "right" || side == "bottom"
-                                ? "source"
-                                : "target"
+                        type={side.type}
+                        position={
+                            side.pos == "left"
+                                ? Position.Left
+                                : side.pos == "bottom"
+                                  ? Position.Bottom
+                                  : side.pos == "right"
+                                    ? Position.Right
+                                    : Position.Top
                         }
-                        position={pos[side]}
+                        id={side.id}
                     />
                 );
             })}
