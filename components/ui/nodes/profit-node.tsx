@@ -86,7 +86,7 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
         },
         {
             id: "n6",
-            position: { x: 270, y: 120 },
+            position: { x: 270, y: 110 },
             data: {
                 className: "max-w-[90px]",
                 src: "/images/logo.png",
@@ -101,7 +101,7 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
         },
         {
             id: "n7",
-            position: { x: 30, y: 260 },
+            position: { x: 30, y: 270 },
             data: {
                 label: "Management",
                 side: [{ pos: "top", id: "a", type: "source" }],
@@ -111,7 +111,7 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
         },
         {
             id: "n8",
-            position: { x: 210, y: 260 },
+            position: { x: 210, y: 270 },
             data: {
                 label: "Finance",
                 side: [{ pos: "top", id: "a", type: "source" }],
@@ -121,7 +121,7 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
         },
         {
             id: "n9",
-            position: { x: 350, y: 260 },
+            position: { x: 350, y: 270 },
             data: {
                 label: "Clear",
                 side: [{ pos: "top", id: "a", type: "source" }],
@@ -131,7 +131,7 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
         },
         {
             id: "n10",
-            position: { x: 470, y: 260 },
+            position: { x: 470, y: 270 },
             data: {
                 label: "Colaboration",
                 side: [{ pos: "top", id: "a", type: "source" }],
