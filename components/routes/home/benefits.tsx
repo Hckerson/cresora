@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { geist } from "@/app/fonts";
 import BenefitCard from "@/components/ui/benefit-card";
 import IncomeNode from "@/components/ui/nodes/income-node";
+import ProfitNode from "@/components/ui/nodes/profit-node";
 import { benefitCardData } from "@/app/lib/placeholder-data";
 
 // email-template.types.ts
@@ -34,7 +35,7 @@ export default function BenefitSection() {
             <div className="box-border grid">
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:grid-rows-2">
                     <IncomeNode data={benefitCardData[0]}/>
-                    {benefitCardData.slice(1,4).map((cardData, idx) => {
+                    {benefitCardData.slice(1,3).map((cardData, idx) => {
                         const { title, iconUrl, imageUrl, subject } = cardData;
                         const big = idx == 0 || idx == 1;
                         return (
@@ -55,6 +56,7 @@ export default function BenefitSection() {
                             </div>
                         );
                     })}
+                    <ProfitNode data={benefitCardData[3]}/>
                 </div>
             </div>
         </div>

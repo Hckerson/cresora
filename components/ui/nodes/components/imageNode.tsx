@@ -7,6 +7,7 @@ type side = "left" | "right" | "top" | "bottom";
 
 type TextNodeProps = Node<
     {
+        width: number
         src: string;
         side: [{ pos: side; id: string; type: "source" | "target" }];
     },
@@ -17,11 +18,12 @@ export default function ImageNode(props: NodeProps<TextNodeProps>) {
     return (
         <div
             className={clsx(
-                "h-[105px] w-[156px] rounded-2xl border border-[#E4E4E4] bg-[#FFFFFF]",
+                " rounded-2xl border border-[#E4E4E4] bg-[#FFFFFF]",
             )}
+            style={{width: props.data.width}}
         >
             <Image
-                className="h-full bg-cover drop-shadow-2xl rounded-2xl pt-2"
+                className=" bg-cover drop-shadow-2xl rounded-2xl pt-2"
                 alt="Node image"
                 src={props.data.src}
                 width={300}

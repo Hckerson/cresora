@@ -5,6 +5,7 @@ import IconNode from "./components/iconNode";
 import TextNode from "./components/text-node";
 import ImageNode from "./components/imageNode";
 import { ReactFlow, Background, Controls } from "@xyflow/react";
+import { init } from "next/dist/compiled/webpack/webpack";
 
 interface NodeProps {
     title: string;
@@ -19,7 +20,7 @@ const nodeTypes = {
     imageDisplay: ImageNode,
 };
 
-export default function IncomeNode({ data }: { data: NodeProps }) {
+export default function ProfitN({ data }: { data: NodeProps }) {
     const { title, subject, alt = `Picture of ${data.title}`, iconUrl } = data;
 
     const initialNodes = [
@@ -27,54 +28,58 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
             id: "n1",
             position: { x: 30, y: 20 },
             data: {
-                label: "CEO",
+                srcFor: "icon",
+                src: "/svgs/Graph.svg",
                 side: [{ pos: "bottom", id: "a", type: "source" }],
             },
-            type: "textDisplay",
+            type: "iconDisplay",
             draggable: true,
         },
         {
             id: "n2",
-            position: { x: 160, y: 20 },
+            position: { x: 290, y: 20 },
             data: {
-                label: "Finance",
+                srcFor: "icon",
+                src: "/svgs/CalendarBlank.svg",
                 side: [
                     { pos: "left", id: "a", type: "source" },
                     { pos: "right", id: "b", type: "source" },
                 ],
             },
-            type: "textDisplay",
+            type: "iconDisplay",
             draggable: true,
         },
         {
             id: "n3",
-            position: { x: 290, y: 20 },
+            position: { x: 530, y: 20 },
             data: {
-                label: "Operator",
+                srcFor: "icon",
+                src: "/svgs/ListDashes.svg",
                 side: [
                     { pos: "left", id: "a", type: "target" },
                     { pos: "right", id: "b", type: "source" },
                 ],
             },
-            type: "textDisplay",
+            type: "iconDisplay",
             draggable: true,
         },
         {
             id: "n4",
-            position: { x: 430, y: 20 },
+            position: { x: 180, y: 75 },
             data: {
-                label: "HRD",
+                srcFor: "icon",
+                src: "/svgs/MagicWand.svg",
                 side: [{ pos: "bottom", id: "a", type: "source" }],
             },
-            type: "textDisplay",
+            type: "iconDisplay",
             draggable: true,
         },
         {
             id: "n5",
-            position: { x: 95, y: 135 },
+            position: { x: 410, y: 75 },
             data: {
                 srcFor: "icon",
-                src: "/svgs/userCircle.svg",
+                src: "/svgs/Network.svg",
                 side: [
                     { pos: "left", id: "a", type: "target" },
                     { pos: "right", id: "b", type: "target" },
@@ -85,65 +90,10 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
         },
         {
             id: "n6",
-            position: { x: 395, y: 135 },
+            position: { x: 270, y: 120 },
             data: {
-                srcFor: "icon",
-                src: "/svgs/plusCircle.svg",
-                side: [
-                    { pos: "left", id: "a", type: "target" },
-                    { pos: "right", id: "b", type: "target" },
-                    { pos: "top", id: "c", type: "target" },
-                ],
-            },
-            type: "iconDisplay",
-        },
-        {
-            id: "n7",
-            position: { x: 30, y: 250 },
-            data: {
-                srcFor: "image",
-                src: "/images/man-one.png",
-                side: [],
-            },
-            type: "iconDisplay",
-        },
-        {
-            id: "n8",
-            position: { x: 160, y: 250 },
-            data: {
-                srcFor: "image",
-                src: "/images/woman-one.png",
-                side: [],
-            },
-            type: "iconDisplay",
-        },
-
-        {
-            id: "n9",
-            position: { x: 330, y: 250 },
-            data: {
-                srcFor: "image",
-                src: "/images/woman-one.png",
-                side: [],
-            },
-            type: "iconDisplay",
-        },
-        {
-            id: "n10",
-            position: { x: 450, y: 250 },
-            data: {
-                srcFor: "image",
-                src: "/images/man-two.png",
-                side: [],
-            },
-            type: "iconDisplay",
-        },
-        {
-            id: "n11",
-            position: { x: 186, y: 135 },
-            data: {
-                width: 165,
-                src: "/images/income.png",
+                width: 95,
+                src: "/images/logo.png",
                 side: [
                     { pos: "left", id: "a", type: "source" },
                     { pos: "right", id: "b", type: "source" },
@@ -151,9 +101,49 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
             },
             type: "imageDisplay",
         },
+        {
+            id: "n7",
+            position: { x: 30, y: 250 },
+            data: {
+                label: "Management",
+                side: [{ pos: "bottom", id: "a", type: "source" }],
+            },
+            type: "textDisplay",
+            draggable: true,
+        },
+        {
+            id: "n8",
+            position: { x: 210, y: 250 },
+            data: {
+                label: "Finance",
+                side: [{ pos: "bottom", id: "a", type: "source" }],
+            },
+            type: "textDisplay",
+            draggable: true,
+        },
+        {
+            id: "n9",
+            position: { x: 350, y: 250 },
+            data: {
+                label: "Clear",
+                side: [{ pos: "bottom", id: "a", type: "source" }],
+            },
+            type: "textDisplay",
+            draggable: true,
+        },
+        {
+            id: "n10",
+            position: { x: 470, y: 250 },
+            data: {
+                label: "Colaboration",
+                side: [{ pos: "bottom", id: "a", type: "source" }],
+            },
+            type: "textDisplay",
+            draggable: true,
+        },
     ];
 
-    const initialEdges = [
+        const initialEdges = [
         {
             id: "n1-n5",
             source: "n1",
@@ -168,42 +158,8 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
             targetHandle: "c",
             type: "step",
         },
-        {
-            id: "n2-n3",
-            source: "n2",
-            target: "n3",
-            type: "step",
-        },
-        {
-            id: "n4-n6",
-            source: "n4",
-            target: "n6",
-            type: "step",
-            targetHandle: "b",
-        },
-        {
-            id: "n3-n6",
-            source: "n3",
-            target: "n6",
-            targetHandle: "c",
-            type: "step",
-        },
-        {
-            id: "n5-n11",
-            source: "n11",
-            sourceHandle: "a",
-            targetHandle: "b",
-            target: "n5",
-            type: "step",
-        },
-        {
-            id: "n6-n11",
-            source: "n11",
-            target: "n6",
-            sourceHandle: "b",
-            type: "step",
-        },
     ];
+
     return (
         <div className="box-border rounded-3xl border border-[#E4E4E4] lg:col-span-2">
             <div className="bg-background box-border flex h-full flex-col justify-between gap-y-8 overflow-hidden rounded-3xl p-4 md:p-6 xl:p-8">
