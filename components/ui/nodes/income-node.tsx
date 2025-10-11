@@ -142,7 +142,7 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
             id: "n11",
             position: { x: 186, y: 135 },
             data: {
-                width: 165,
+                className:'max-w-[165px] max-h-[105px]',
                 src: "/images/income.png",
                 side: [
                     { pos: "left", id: "a", type: "source" },

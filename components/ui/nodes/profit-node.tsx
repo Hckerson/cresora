@@ -20,7 +20,7 @@ const nodeTypes = {
     imageDisplay: ImageNode,
 };
 
-export default function ProfitN({ data }: { data: NodeProps }) {
+export default function MoneyNode({ data }: { data: NodeProps }) {
     const { title, subject, alt = `Picture of ${data.title}`, iconUrl } = data;
 
     const initialNodes = [
@@ -30,21 +30,18 @@ export default function ProfitN({ data }: { data: NodeProps }) {
             data: {
                 srcFor: "icon",
                 src: "/svgs/Graph.svg",
-                side: [{ pos: "bottom", id: "a", type: "source" }],
+                side: [{ pos: "right", id: "a", type: "source" }],
             },
             type: "iconDisplay",
             draggable: true,
         },
         {
             id: "n2",
-            position: { x: 290, y: 20 },
+            position: { x: 295, y: 20 },
             data: {
                 srcFor: "icon",
                 src: "/svgs/CalendarBlank.svg",
-                side: [
-                    { pos: "left", id: "a", type: "source" },
-                    { pos: "right", id: "b", type: "source" },
-                ],
+                side: [{ pos: "bottom", id: "a", type: "target" }],
             },
             type: "iconDisplay",
             draggable: true,
@@ -55,10 +52,7 @@ export default function ProfitN({ data }: { data: NodeProps }) {
             data: {
                 srcFor: "icon",
                 src: "/svgs/ListDashes.svg",
-                side: [
-                    { pos: "left", id: "a", type: "target" },
-                    { pos: "right", id: "b", type: "source" },
-                ],
+                side: [{ pos: "left", id: "a", type: "source" }],
             },
             type: "iconDisplay",
             draggable: true,
@@ -69,7 +63,10 @@ export default function ProfitN({ data }: { data: NodeProps }) {
             data: {
                 srcFor: "icon",
                 src: "/svgs/MagicWand.svg",
-                side: [{ pos: "bottom", id: "a", type: "source" }],
+                side: [
+                    { pos: "top", id: "a", type: "target" },
+                    { pos: "bottom", id: "b", type: "source" },
+                ],
             },
             type: "iconDisplay",
             draggable: true,
@@ -81,9 +78,8 @@ export default function ProfitN({ data }: { data: NodeProps }) {
                 srcFor: "icon",
                 src: "/svgs/Network.svg",
                 side: [
-                    { pos: "left", id: "a", type: "target" },
-                    { pos: "right", id: "b", type: "target" },
-                    { pos: "top", id: "c", type: "target" },
+                    { pos: "top", id: "a", type: "target" },
+                    { pos: "bottom", id: "b", type: "target" },
                 ],
             },
             type: "iconDisplay",
@@ -92,71 +88,122 @@ export default function ProfitN({ data }: { data: NodeProps }) {
             id: "n6",
             position: { x: 270, y: 120 },
             data: {
-                width: 95,
+                className: "max-w-[90px]",
                 src: "/images/logo.png",
                 side: [
-                    { pos: "left", id: "a", type: "source" },
+                    { pos: "left", id: "a", type: "target" },
                     { pos: "right", id: "b", type: "source" },
+                    { pos: "top", id: "c", type: "source" },
+                    { pos: "bottom", id: "d", type: "target" },
                 ],
             },
             type: "imageDisplay",
         },
         {
             id: "n7",
-            position: { x: 30, y: 250 },
+            position: { x: 30, y: 260 },
             data: {
                 label: "Management",
-                side: [{ pos: "bottom", id: "a", type: "source" }],
+                side: [{ pos: "top", id: "a", type: "source" }],
             },
             type: "textDisplay",
             draggable: true,
         },
         {
             id: "n8",
-            position: { x: 210, y: 250 },
+            position: { x: 210, y: 260 },
             data: {
                 label: "Finance",
-                side: [{ pos: "bottom", id: "a", type: "source" }],
+                side: [{ pos: "top", id: "a", type: "source" }],
             },
             type: "textDisplay",
             draggable: true,
         },
         {
             id: "n9",
-            position: { x: 350, y: 250 },
+            position: { x: 350, y: 260 },
             data: {
                 label: "Clear",
-                side: [{ pos: "bottom", id: "a", type: "source" }],
+                side: [{ pos: "top", id: "a", type: "source" }],
             },
             type: "textDisplay",
             draggable: true,
         },
         {
             id: "n10",
-            position: { x: 470, y: 250 },
+            position: { x: 470, y: 260 },
             data: {
                 label: "Colaboration",
-                side: [{ pos: "bottom", id: "a", type: "source" }],
+                side: [{ pos: "top", id: "a", type: "source" }],
             },
             type: "textDisplay",
             draggable: true,
         },
     ];
 
-        const initialEdges = [
+    const initialEdges = [
         {
-            id: "n1-n5",
+            id: "n1-n4",
             source: "n1",
-            target: "n5",
+            target: "n4",
             sourceHandle: "a",
             type: "step",
         },
         {
-            id: "n2-n5",
-            source: "n2",
-            target: "n5",
-            targetHandle: "c",
+            id: "n4-n6",
+            source: "n4",
+            target: "n6",
+            sourceHandle: "b",
+            targetHandle: "a",
             type: "step",
+        },
+        {
+            id: "n2-n6",
+            source: "n6",
+            target: "n2",
+            type: "step",
+            sourceHandle: "c",
+        },
+        {
+            id: "n3-n5",
+            source: "n3",
+            target: "n5",
+            type: "step",
+        },
+        {
+            id: "n5-n6",
+            source: "n6",
+            target: "n5",
+            type: "step",
+            targetHandle: "b",
+        },
+        {
+            id: "n6-n7",
+            source: "n7",
+            targetHandle: "d",
+            target: "n6",
+            type: "step",
+        },
+        {
+            id: "n8-n6",
+            source: "n8",
+            target: "n6",
+            type: "step",
+            targetHandle: "d",
+        },
+        {
+            id: "n6-n9",
+            source: "n9",
+            target: "n6",
+            type: "step",
+            targetHandle: "d",
+        },
+        {
+            id: "n10-n6",
+            source: "n10",
+            target: "n6",
+            type: "step",
+            targetHandle: "d",  
         },
     ];
 

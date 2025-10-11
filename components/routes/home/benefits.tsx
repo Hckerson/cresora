@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { geist } from "@/app/fonts";
 import BenefitCard from "@/components/ui/benefit-card";
 import IncomeNode from "@/components/ui/nodes/income-node";
-import ProfitNode from "@/components/ui/nodes/profit-node";
+import MoneyNode from "@/components/ui/nodes/profit-node";
 import { benefitCardData } from "@/app/lib/placeholder-data";
 
 // email-template.types.ts
@@ -56,7 +56,7 @@ export default function BenefitSection() {
                             </div>
                         );
                     })}
-                    <ProfitNode data={benefitCardData[3]}/>
+                    <MoneyNode data={benefitCardData[3]}/>
                 </div>
             </div>
         </div>
