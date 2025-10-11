@@ -85,7 +85,7 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
         },
         {
             id: "n6",
-            position: { x: 395, y: 135 },
+            position: { x: 400, y: 135 },
             data: {
                 srcFor: "icon",
                 src: "/svgs/plusCircle.svg",
