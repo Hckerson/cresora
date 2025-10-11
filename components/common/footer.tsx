@@ -6,15 +6,15 @@ import { footerData } from "@/app/lib/placeholder-data";
 
 export default function Footer() {
     return (
-        <div className="paddy pad-y pb-0 text-[18px] 3xl:w-[1480px] mx-auto">
+        <div className="paddy pad-y 3xl:w-[1480px] mx-auto pb-0 text-[18px]">
             <div className="flex h-full w-full flex-col gap-y-12">
                 <div className="relative flex flex-col justify-between gap-y-6 lg:h-[264px] lg:flex-row">
                     <div className="flex h-full flex-col justify-between text-[18px]">
                         <div className="flex flex-col gap-y-6 lg:h-full">
                             <Logo />
                             <p className="text-primary-foreground max-w-[30ch] text-xs md:text-sm xl:text-base">
-                                We bring clarity and control to your company's
-                                financial management
+                                {`We bring clarity and control to your company's
+                            financial management`}
                             </p>
                         </div>
                         <div className="flex gap-x-6 pt-6">

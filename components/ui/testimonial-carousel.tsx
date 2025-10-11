@@ -17,9 +17,9 @@ export default function Carousel() {
             freeMode={true}
         >
             {testimonialCardData.map((cardData, index) => (
-                <SwiperSlide className="">
+                <SwiperSlide       key={index} className="">
                     <TestimonialCard
-                        key={index}
+                  
                         title={cardData.title}
                         subject={cardData.subject}
                         avatarSrc={cardData.avatarUrl}
