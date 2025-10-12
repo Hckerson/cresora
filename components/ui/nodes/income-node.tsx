@@ -41,8 +41,8 @@ interface EdgeType {
     source: string;
     target: string;
     type: string;
-    sourceHandle: string;
-    targetHandle: string;
+    sourceHandle?: string;
+    targetHandle?: string;
 }
 
 const nodeTypes = {
@@ -189,7 +189,7 @@ const initialNodes: NodeType[] = [
     },
 ];
 
-const initialEdges = [
+const initialEdges: EdgeType[] = [
     {
         id: "n1-n5",
         source: "n1",
@@ -242,7 +242,7 @@ const initialEdges = [
 ];
 
 export default function IncomeNode({ data }: { data: NodeProps }) {
-    const [node, setNodes] = useState(initialNodes);
+    const [nodes, setNodes] = useState(initialNodes);
     const [edges, setEdges] = useState(initialEdges);
 
     const onNodesChange = useCallback(
@@ -284,9 +284,11 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
                 </div>
                 <div className="bg-background box-border h-full w-full rounded-3xl border border-[#E4E4E4]">
                     <ReactFlow
-                        nodes={initialNodes}
+                        nodes={nodes}
                         nodeTypes={nodeTypes}
-                        edges={initialEdges}
+                        edges={edges}
+                        onNodesChange={onNodesChange}
+                        onEdgesChange={onEdgesChange}
                         fitView
                     >
                         <Background />
