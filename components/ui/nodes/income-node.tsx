@@ -8,7 +8,6 @@ import ImageNode from "./components/imageNode";
 import {
     ReactFlow,
     Background,
-    Controls,
     applyEdgeChanges,
     applyNodeChanges,
     NodeChange,
@@ -39,6 +38,7 @@ interface NodeType {
 interface EdgeType {
     id: string;
     source: string;
+    animated: boolean
     target: string;
     type: string;
     sourceHandle?: string;
@@ -50,6 +50,7 @@ const nodeTypes = {
     iconDisplay: IconNode,
     imageDisplay: ImageNode,
 };
+
 
 const initialNodes: NodeType[] = [
     {
@@ -195,26 +196,30 @@ const initialEdges: EdgeType[] = [
         source: "n1",
         target: "n5",
         sourceHandle: "a",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n2-n5",
         source: "n2",
         target: "n5",
         targetHandle: "c",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n2-n3",
         source: "n2",
         target: "n3",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n4-n6",
         source: "n4",
         target: "n6",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
         targetHandle: "b",
     },
     {
@@ -222,7 +227,8 @@ const initialEdges: EdgeType[] = [
         source: "n3",
         target: "n6",
         targetHandle: "c",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n5-n11",
@@ -230,14 +236,16 @@ const initialEdges: EdgeType[] = [
         sourceHandle: "a",
         targetHandle: "b",
         target: "n5",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n6-n11",
         source: "n11",
         target: "n6",
         sourceHandle: "b",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
 ];
 
@@ -263,7 +271,7 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
     const { title, subject, alt = `Picture of ${data.title}`, iconUrl } = data;
 
     return (
-        <div className="box-border h-[400px] md:h-[350px] rounded-3xl border border-[#E4E4E4] lg:col-span-2 lg:h-full">
+        <div className="box-border h-[400px] rounded-3xl border border-[#E4E4E4] md:h-[350px] lg:col-span-2 lg:h-full">
             <div className="bg-background box-border flex h-full flex-col justify-between gap-y-8 overflow-hidden rounded-3xl p-4 md:p-6 xl:p-8">
                 <div className="relative">
                     <CustomImage
@@ -292,7 +300,6 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
                         fitView
                     >
                         <Background />
-                        <Controls />
                     </ReactFlow>
                 </div>
             </div>

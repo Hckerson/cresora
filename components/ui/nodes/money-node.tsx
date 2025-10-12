@@ -8,7 +8,6 @@ import ImageNode from "./components/imageNode";
 import {
     ReactFlow,
     Background,
-    Controls,
     NodeChange,
     applyEdgeChanges,
     applyNodeChanges,
@@ -40,6 +39,7 @@ interface EdgeType {
     id: string;
     source: string;
     target: string;
+    animated: boolean
     type: string;
     sourceHandle?: string;
     targetHandle?: string;
@@ -177,7 +177,8 @@ const initialEdges: EdgeType[] = [
         source: "n1",
         target: "n4",
         sourceHandle: "a",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n4-n6",
@@ -185,26 +186,30 @@ const initialEdges: EdgeType[] = [
         target: "n6",
         sourceHandle: "b",
         targetHandle: "a",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n2-n6",
         source: "n6",
         target: "n2",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
         sourceHandle: "c",
     },
     {
         id: "n3-n5",
         source: "n3",
         target: "n5",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n5-n6",
         source: "n6",
         target: "n5",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
         targetHandle: "b",
     },
     {
@@ -212,27 +217,31 @@ const initialEdges: EdgeType[] = [
         source: "n7",
         targetHandle: "d",
         target: "n6",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
     },
     {
         id: "n8-n6",
         source: "n8",
         target: "n6",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
         targetHandle: "d",
     },
     {
         id: "n6-n9",
         source: "n9",
         target: "n6",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
         targetHandle: "d",
     },
     {
         id: "n10-n6",
         source: "n10",
         target: "n6",
-        type: "step",
+        type: "smoothstep",
+        animated: true,
         targetHandle: "d",
     },
 ];
@@ -288,7 +297,6 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
                         fitView
                     >
                         <Background />
-                        <Controls />
                     </ReactFlow>
                 </div>
             </div>
