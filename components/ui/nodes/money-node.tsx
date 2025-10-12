@@ -259,7 +259,7 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
     const { title, subject, alt = `Picture of ${data.title}`, iconUrl } = data;
 
     return (
-        <div className="box-border rounded-3xl border border-[#E4E4E4] lg:col-span-2">
+        <div className="box-border h-[400px] rounded-3xl border border-[#E4E4E4] md:h-[350px] lg:col-span-2 lg:h-full">
             <div className="bg-background box-border flex h-full flex-col justify-between gap-y-8 overflow-hidden rounded-3xl p-4 md:p-6 xl:p-8">
                 <div className="relative">
                     <CustomImage
