@@ -72,29 +72,6 @@ export default function FeatureSection() {
                     ))}
                 </div>
                 <div className="bg-background relative box-border flex h-full w-full items-center justify-center overflow-hidden rounded-3xl border border-[#dadcdf]">
-                    <CustomImage
-                        src="/images/guage.png"
-                        alt="Score guage"
-                        width={966}
-                        height={722}
-                        classes="max-w-[298px] max-h-[190px] -translate-y-5"
-                    />
-                    <CustomImage
-                        src="/images/guage.png"
-                        alt="Score guage"
-                        width={966}
-                        height={722}
-                        classes="max-w-[298px] max-h-[190px]"
-                        boxClass="absolute  top-1/2 -translate-y-1/2  left opacity-30"
-                    />
-                    <CustomImage
-                        src="/images/guage.png"
-                        alt="Score guage"
-                        width={966}
-                        height={722}
-                        classes="max-w-[298px] max-h-[190px]"
-                        boxClass="absolute  top-1/2 -translate-y-1/2  right opacity-30"
-                    />
                     <div className="absolute bottom-10 h-[77px] w-[413px]">
                         {featureCardData.map((card, idx) => {
                             return (

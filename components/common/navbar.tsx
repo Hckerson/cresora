@@ -59,34 +59,38 @@ export default function Navbar() {
             </div>
             <div className="absolute inset-0 mt-[93px] block h-screen gap-y-4 lg:hidden">
                 {isMenuOpen && (
-                    <div className="xs:p-6 z-20 flex h-full flex-col gap-y-4 bg-black/50 p-4 md:p-8">
+                    <div
+                        onClick={() => setIsMenuOpen(false)}
+                        className="xs:p-6 z-20 flex h-full flex-col gap-y-4 bg-black/50 p-4 md:p-8"
+                    >
                         <ul className="box-border flex w-full flex-col gap-y-6">
-                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 xs:hidden">
+                            <li
+                                onClick={() => setIsMenuOpen(false)}
+                                className="xs:hidden block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1"
+                            >
                                 <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
-                                    <Link
-                                        href="/features"
-                                        style={{}}
-                                        className=""
-                                    >
+                                    <Link href="/" style={{}} className="">
                                         Home
                                     </Link>
                                 </div>
                             </li>
-                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 xs:hidden">
+                            <li
+                                onClick={() => setIsMenuOpen(false)}
+                                className="xs:hidden block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1"
+                            >
                                 <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
-                                    <Link
-                                        href="/features"
-                                        style={{}}
-                                        className=""
-                                    >
+                                    <Link href="/about" style={{}} className="">
                                         About
                                     </Link>
                                 </div>
                             </li>
-                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 xs:hidden">
+                            <li
+                                onClick={() => setIsMenuOpen(false)}
+                                className="xs:hidden block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1"
+                            >
                                 <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
                                     <Link
-                                        href="/features"
+                                        href="/pricing"
                                         style={{}}
                                         className=""
                                     >
@@ -95,7 +99,10 @@ export default function Navbar() {
                                 </div>
                             </li>
 
-                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 md:hidden">
+                            <li
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 md:hidden"
+                            >
                                 <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
                                     <Link
                                         href="/features"
@@ -106,14 +113,17 @@ export default function Navbar() {
                                     </Link>
                                 </div>
                             </li>
-                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 md:hidden">
+                            <li
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 md:hidden"
+                            >
                                 <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
                                     <Link
                                         href="/contacts"
                                         style={{}}
                                         className=""
                                     >
-                                        Contace
+                                        Contact
                                     </Link>
                                 </div>
                             </li>
