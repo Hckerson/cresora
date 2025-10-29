@@ -1,5 +1,6 @@
 import Hightlight from "@/components/ui/highlight";
 import Description from "@/components/ui/description";
+import ContactForm from "@/components/ui/contact-form";
 
 
 export default function HeroSection() {
@@ -13,7 +14,9 @@ export default function HeroSection() {
                     classT="max-w-[25ch]"
                     classD="max-w-[70ch]"
                 />
+                <ContactForm/>
             </div>
+
         </div>
     );
 }
