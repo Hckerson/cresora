@@ -90,7 +90,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n4",
-        position: { x: 430, y: 20 },
+        position: { x: 433, y: 20 },
         data: {
             label: "HRD",
             side: [{ pos: "bottom", id: "a", type: "source" }],

@@ -30,7 +30,7 @@ interface NodeType {
         src?: string;
         srcFor?: string;
         topic?: string;
-        style?: string
+        style?: string;
         description?: string;
         side: { pos: string; id: string; type: string }[];
     };
@@ -63,7 +63,7 @@ const initialNodes: NodeType[] = [
             label: "Outcome",
 
             side: [{ pos: "right", id: "a", type: "source" }],
-            style:"w-[120px]"
+            style: "w-[120px]",
         },
         type: "textDisplay",
         draggable: true,
@@ -74,7 +74,7 @@ const initialNodes: NodeType[] = [
         data: {
             label: "Income",
             side: [{ pos: "right", id: "a", type: "target" }],
-            style:"w-[120px]"
+            style: "w-[120px]",
         },
         type: "textDisplay",
         draggable: true,
@@ -85,7 +85,7 @@ const initialNodes: NodeType[] = [
         data: {
             label: "Compensate",
             side: [{ pos: "right", id: "a", type: "target" }],
-            style:"w-[120px]"
+            style: "w-[120px]",
         },
         type: "textDisplay",
         draggable: true,
@@ -96,7 +96,7 @@ const initialNodes: NodeType[] = [
         data: {
             label: "Profit",
             side: [{ pos: "right", id: "a", type: "source" }],
-            style:"w-[120px]"
+            style: "w-[120px]",
         },
         type: "textDisplay",
         draggable: true,
@@ -113,7 +113,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n6",
-        position: { x: 610, y: 160 },
+        position: { x: 610, y: 164 },
         data: {
             description: "19% higher than your weekly average",
             side: [{ pos: "left", id: "a", type: "target" }],
@@ -133,9 +133,9 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n8",
-        position: { x: 180, y: 150 },
+        position: { x: 120, y: 100 },
         data: {
-            style: "max-w-[270px] ",
+            style: "max-w-[250px] max-h-[205px]",
             src: "/images/graph.png",
             side: [
                 { pos: "left", id: "a", type: "source" },
@@ -149,7 +149,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n9",
-        position: { x: 430, y: 190 },
+        position: { x: 430, y: 182 },
         data: {
             srcFor: "icon",
             src: "/svgs/MagicWand.svg",
@@ -165,76 +165,71 @@ const initialNodes: NodeType[] = [
 
 const initialEdges: EdgeType[] = [
     {
-        id: "n1-n4",
+        id: "n1-n8",
+        target: "n8",
         source: "n1",
-        target: "n4",
-        sourceHandle: "a",
         type: "smoothstep",
+        targetHandle: "c",
         animated: true,
     },
     {
-        id: "n4-n6",
-        source: "n4",
-        target: "n6",
-        sourceHandle: "b",
+        id: "n2-n8",
+        target: "n2",
+        source: "n8",
+        sourceHandle: "a",
         targetHandle: "a",
         type: "smoothstep",
         animated: true,
     },
     {
-        id: "n2-n6",
-        source: "n6",
-        target: "n2",
-        type: "smoothstep",
-        animated: true,
-        sourceHandle: "c",
-    },
-    {
-        id: "n3-n5",
-        source: "n3",
-        target: "n5",
-        type: "smoothstep",
-        animated: true,
-    },
-    {
-        id: "n5-n6",
-        source: "n6",
-        target: "n5",
-        type: "smoothstep",
-        animated: true,
-        targetHandle: "b",
-    },
-    {
-        id: "n6-n7",
-        source: "n7",
-        targetHandle: "d",
-        target: "n6",
-        type: "smoothstep",
-        animated: true,
-    },
-    {
-        id: "n8-n6",
+        id: "n3-n8",
         source: "n8",
-        target: "n6",
+        target: "n3",
         type: "smoothstep",
         animated: true,
+        sourceHandle: "a",
+        targetHandle: "a",
+    },
+    {
+        id: "n4-n8",
+        source: "n4",
+        target: "n8",
+        type: "smoothstep",
         targetHandle: "d",
+        animated: true,
+    },
+    {
+        id: "n5-n9",
+        source: "n9",
+        target: "n5",
+        type: "smoothstep",
+        animated: true,
+        targetHandle: "a",
     },
     {
         id: "n6-n9",
         source: "n9",
+        targetHandle: "a",
         target: "n6",
         type: "smoothstep",
         animated: true,
-        targetHandle: "d",
     },
     {
-        id: "n10-n6",
-        source: "n10",
-        target: "n6",
+        id: "n7-n9",
+        source: "n9",
+        target: "n7",
         type: "smoothstep",
         animated: true,
-        targetHandle: "d",
+        targetHandle: "a",
+    },
+    {
+        id: "n8-n9",
+        source: "n8",
+        target: "n9",
+        type: "smoothstep",
+        sourceHandle: "b",
+        animated: true,
+        targetHandle: "a",
     },
 ];
 

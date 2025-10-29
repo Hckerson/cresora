@@ -18,12 +18,12 @@ export default function ImageNode(props: NodeProps<TextNodeProps>) {
     return (
         <div
             className={clsx(
-                "rounded-2xl border border-[#E4E4E4] bg-[#FFFFFF]",
+                "rounded-2xl border  border-[#E4E4E4]  bg-[#FFFFFF]",
                 props.data.style,
             )}
         >
             <Image
-                className="rounded-2xl bg-cover  drop-shadow-2xl"
+                className="rounded-2xl"
                 alt="Node image"
                 src={props.data.src}
                 width={300}

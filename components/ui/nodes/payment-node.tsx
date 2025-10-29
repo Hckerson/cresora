@@ -50,7 +50,6 @@ interface EdgeType {
 const nodeTypes = {
     textDisplay: TextNode,
     iconDisplay: IconNode,
-    imageDisplay: ImageNode,
     pressableDisplay: PressableNode,
 };
 

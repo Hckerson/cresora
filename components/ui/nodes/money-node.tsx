@@ -141,7 +141,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n8",
-        position: { x: 210, y: 270 },
+        position: { x: 206, y: 270 },
         data: {
             label: "Finance",
             side: [{ pos: "top", id: "a", type: "source" }],
