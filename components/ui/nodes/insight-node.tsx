@@ -2,6 +2,7 @@
 import "@xyflow/react/dist/style.css";
 import CustomImage from "../custom-image";
 import IconNode from "./components/icon-node";
+import DescriptionNode from "./components/description-node";
 import TextNode from "./components/text-node";
 import { useState, useCallback } from "react";
 import ImageNode from "./components/image-node";
@@ -26,9 +27,11 @@ interface NodeType {
     position: { x: number; y: number };
     data: {
         label?: string;
-        className?: string;
         src?: string;
         srcFor?: string;
+        topic?: string;
+        style?: string
+        description?: string;
         side: { pos: string; id: string; type: string }[];
     };
     type: string;
@@ -49,80 +52,95 @@ const nodeTypes = {
     textDisplay: TextNode,
     iconDisplay: IconNode,
     imageDisplay: ImageNode,
+    descriptionDisplay: DescriptionNode,
 };
 
 const initialNodes: NodeType[] = [
     {
         id: "n1",
-        position: { x: 30, y: 20 },
+        position: { x: -150, y: 40 },
         data: {
-            srcFor: "icon",
-            src: "/svgs/Graph.svg",
+            label: "Outcome",
+
             side: [{ pos: "right", id: "a", type: "source" }],
+            style:"w-[120px]"
         },
-        type: "iconDisplay",
+        type: "textDisplay",
         draggable: true,
     },
     {
         id: "n2",
-        position: { x: 295, y: 20 },
+        position: { x: -150, y: 125 },
         data: {
-            srcFor: "icon",
-            src: "/svgs/CalendarBlank.svg",
-            side: [{ pos: "bottom", id: "a", type: "target" }],
+            label: "Income",
+            side: [{ pos: "right", id: "a", type: "target" }],
+            style:"w-[120px]"
         },
-        type: "iconDisplay",
+        type: "textDisplay",
         draggable: true,
     },
     {
         id: "n3",
-        position: { x: 530, y: 20 },
+        position: { x: -150, y: 210 },
         data: {
-            srcFor: "icon",
-            src: "/svgs/ListDashes.svg",
-            side: [{ pos: "left", id: "a", type: "source" }],
+            label: "Compensate",
+            side: [{ pos: "right", id: "a", type: "target" }],
+            style:"w-[120px]"
         },
-        type: "iconDisplay",
+        type: "textDisplay",
         draggable: true,
     },
     {
         id: "n4",
-        position: { x: 180, y: 75 },
+        position: { x: -150, y: 300 },
         data: {
-            srcFor: "icon",
-            src: "/svgs/MagicWand.svg",
-            side: [
-                { pos: "top", id: "a", type: "target" },
-                { pos: "bottom", id: "b", type: "source" },
-            ],
+            label: "Profit",
+            side: [{ pos: "right", id: "a", type: "source" }],
+            style:"w-[120px]"
         },
-        type: "iconDisplay",
+        type: "textDisplay",
         draggable: true,
     },
     {
         id: "n5",
-        position: { x: 410, y: 75 },
+        position: { x: 610, y: 40 },
         data: {
-            srcFor: "icon",
-            src: "/svgs/Network.svg",
-            side: [
-                { pos: "top", id: "a", type: "target" },
-                { pos: "bottom", id: "b", type: "target" },
-            ],
+            description: "Spending increased  8% this month",
+            side: [{ pos: "left", id: "a", type: "target" }],
         },
-        type: "iconDisplay",
+        type: "descriptionDisplay",
         draggable: true,
     },
     {
         id: "n6",
-        position: { x: 270, y: 110 },
+        position: { x: 610, y: 160 },
         data: {
-            className: "max-w-[90px]",
-            src: "/images/logo.png",
+            description: "19% higher than your weekly average",
+            side: [{ pos: "left", id: "a", type: "target" }],
+        },
+        type: "descriptionDisplay",
+        draggable: true,
+    },
+    {
+        id: "n7",
+        position: { x: 610, y: 290 },
+        data: {
+            description: "You have 5.4 months of runway left",
+            side: [{ pos: "left", id: "a", type: "target" }],
+        },
+        type: "descriptionDisplay",
+        draggable: true,
+    },
+    {
+        id: "n8",
+        position: { x: 180, y: 150 },
+        data: {
+            style: "max-w-[270px] ",
+            src: "/images/graph.png",
             side: [
-                { pos: "left", id: "a", type: "target" },
+                { pos: "left", id: "a", type: "source" },
                 { pos: "right", id: "b", type: "source" },
-                { pos: "top", id: "c", type: "source" },
+                { pos: "top", id: "c", type: "target" },
                 { pos: "bottom", id: "d", type: "target" },
             ],
         },
@@ -130,43 +148,17 @@ const initialNodes: NodeType[] = [
         draggable: true,
     },
     {
-        id: "n7",
-        position: { x: 30, y: 270 },
-        data: {
-            label: "Management",
-            side: [{ pos: "top", id: "a", type: "source" }],
-        },
-        type: "textDisplay",
-        draggable: true,
-    },
-    {
-        id: "n8",
-        position: { x: 210, y: 270 },
-        data: {
-            label: "Finance",
-            side: [{ pos: "top", id: "a", type: "source" }],
-        },
-        type: "textDisplay",
-        draggable: true,
-    },
-    {
         id: "n9",
-        position: { x: 350, y: 270 },
+        position: { x: 430, y: 190 },
         data: {
-            label: "Clear",
-            side: [{ pos: "top", id: "a", type: "source" }],
+            srcFor: "icon",
+            src: "/svgs/MagicWand.svg",
+            side: [
+                { pos: "left", id: "a", type: "target" },
+                { pos: "right", id: "b", type: "source" },
+            ],
         },
-        type: "textDisplay",
-        draggable: true,
-    },
-    {
-        id: "n10",
-        position: { x: 470, y: 270 },
-        data: {
-            label: "Colaboration",
-            side: [{ pos: "top", id: "a", type: "source" }],
-        },
-        type: "textDisplay",
+        type: "iconDisplay",
         draggable: true,
     },
 ];

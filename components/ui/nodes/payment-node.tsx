@@ -4,8 +4,8 @@ import CustomImage from "../custom-image";
 import IconNode from "./components/icon-node";
 import TextNode from "./components/text-node";
 import { useState, useCallback } from "react";
-import PressableNode from "./components/pressable-node";
 import ImageNode from "./components/image-node";
+import PressableNode from "./components/pressable-node";
 import {
     ReactFlow,
     Background,
@@ -57,7 +57,7 @@ const nodeTypes = {
 const initialNodes: NodeType[] = [
     {
         id: "n1",
-        position: { x: -80, y: 30 },
+        position: { x: -80, y: 27 },
         data: {
             srcFor: "icon",
             src: "/svgs/UserCircle.svg",
@@ -68,7 +68,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n2",
-        position: { x: 815, y: 30 },
+        position: { x: 815, y: 27 },
         data: {
             srcFor: "icon",
             src: "/svgs/GoogleDriveLogo.svg",
@@ -79,7 +79,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n3",
-        position: { x: -80, y: 290 },
+        position: { x: -80, y: 287 },
         data: {
             srcFor: "icon",
             src: "/svgs/FramerLogo.svg",
@@ -90,7 +90,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n4",
-        position: { x: 815, y: 290 },
+        position: { x: 815, y: 287 },
         data: {
             srcFor: "icon",
             src: "/svgs/Building.svg",
@@ -131,7 +131,7 @@ const initialNodes: NodeType[] = [
         data: {
             label: "Digital Product",
             side: [
-                { pos: "left", id: "a", type: "source" },
+                { pos: "left", id: "a", type: "target" },
                 { pos: "right", id: "b", type: "target" },
             ],
         },
@@ -153,7 +153,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n9",
-        position: { x: 20, y: 104 },
+        position: { x: 10, y: 104 },
         data: {
             className: "max-w-[265px] max-h-[195px]",
             src: "/images/income.png",
@@ -175,7 +175,7 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n11",
-        position: { x: 350, y: 150 },
+        position: { x: 350, y: 153 },
         data: {
             label: "Profit",
             theme: "dark",
@@ -203,7 +203,7 @@ const initialEdges: EdgeType[] = [
         source: "n3",
         target: "n7",
         sourceHandle: "a",
-        targetHandle: "b",
+        targetHandle: "a",
         type: "smoothstep",
         animated: true,
     },

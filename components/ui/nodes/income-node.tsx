@@ -26,7 +26,7 @@ interface NodeType {
     position: { x: number; y: number };
     data: {
         label?: string;
-        className?: string;
+        style?: string;
         src?: string;
         srcFor?: string;
         side: { pos: string; id: string; type: string }[];
@@ -177,7 +177,7 @@ const initialNodes: NodeType[] = [
         id: "n11",
         position: { x: 186, y: 135 },
         data: {
-            className: "max-w-[165px] max-h-[105px]",
+            style: "max-w-[165px] max-h-[105px]",
             src: "/images/income.png",
             side: [
                 { pos: "left", id: "a", type: "source" },

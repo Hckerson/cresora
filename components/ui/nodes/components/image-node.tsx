@@ -7,7 +7,7 @@ type side = "left" | "right" | "top" | "bottom";
 
 type TextNodeProps = Node<
     {
-        className: string;
+        style: string;
         src: string;
         side: [{ pos: side; id: string; type: "source" | "target" }];
     },
@@ -19,7 +19,7 @@ export default function ImageNode(props: NodeProps<TextNodeProps>) {
         <div
             className={clsx(
                 "rounded-2xl border border-[#E4E4E4] bg-[#FFFFFF]",
-                props.data.className,
+                props.data.style,
             )}
         >
             <Image
