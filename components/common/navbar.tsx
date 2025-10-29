@@ -57,19 +57,76 @@ export default function Navbar() {
                     Sign in
                 </Button>
             </div>
-            <div className="absolute inset-0 z-20 mt-[93px] block h-screen gap-y-4 lg:hidden">
+            <div className="absolute inset-0 mt-[93px] block h-screen gap-y-4 lg:hidden">
                 {isMenuOpen && (
-                    <div className="relative flex h-full flex-col gap-y-3 bg-black/50">
-                        <div className="flex flex-col p-4 xs:p-6 md:p-8 h-full">
+                    <div className="xs:p-6 z-20 flex h-full flex-col gap-y-4 bg-black/50 p-4 md:p-8">
+                        <ul className="box-border flex w-full flex-col gap-y-6">
+                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 xs:hidden">
+                                <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
+                                    <Link
+                                        href="/features"
+                                        style={{}}
+                                        className=""
+                                    >
+                                        Home
+                                    </Link>
+                                </div>
+                            </li>
+                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 xs:hidden">
+                                <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
+                                    <Link
+                                        href="/features"
+                                        style={{}}
+                                        className=""
+                                    >
+                                        About
+                                    </Link>
+                                </div>
+                            </li>
+                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 xs:hidden">
+                                <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
+                                    <Link
+                                        href="/features"
+                                        style={{}}
+                                        className=""
+                                    >
+                                        Pricing
+                                    </Link>
+                                </div>
+                            </li>
+
+                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 md:hidden">
+                                <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
+                                    <Link
+                                        href="/features"
+                                        style={{}}
+                                        className=""
+                                    >
+                                        Features
+                                    </Link>
+                                </div>
+                            </li>
+                            <li className="block max-w-1/2 rounded-[8px] border border-[#E4E4E4] bg-white p-1 md:hidden">
+                                <div className="rounded-[6px] border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] p-3 text-xs text-black md:text-sm xl:text-base">
+                                    <Link
+                                        href="/contacts"
+                                        style={{}}
+                                        className=""
+                                    >
+                                        Contace
+                                    </Link>
+                                </div>
+                            </li>
+                        </ul>
+                        <div className="flex items-center justify-center">
                             <Button
                                 variant="default"
-                                visibility="md:hidden block"
+                                visibility="lg:hidden block"
                                 size="lg"
                                 style="hover:bg-gray-100"
                             >
                                 Sign in
                             </Button>
-
                         </div>
                     </div>
                 )}
