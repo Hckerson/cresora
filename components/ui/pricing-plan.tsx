@@ -7,7 +7,7 @@ import PricingPlanCard from "@/components/ui/pricing-card";
 export default function PricingPlan() {
     const [planName, setPlanName] = useState<"month" | "year">("month");
     return (
-        <div className="flex flex-col items-center justify-center gap-y-8">
+        <div className="flex flex-col items-center justify-center gap-y-8 pt-4">
             <div className="mx-auto">
                 <div
                     onClick={() => {

@@ -61,7 +61,7 @@ const initialNodes: NodeType[] = [
             side: [{ pos: "bottom", id: "a", type: "source" }],
         },
         type: "textDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n2",
@@ -74,7 +74,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "textDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n3",
@@ -87,7 +87,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "textDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n4",
@@ -97,7 +97,7 @@ const initialNodes: NodeType[] = [
             side: [{ pos: "bottom", id: "a", type: "source" }],
         },
         type: "textDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n5",
@@ -112,7 +112,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "iconDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n6",
@@ -127,7 +127,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "iconDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n7",
@@ -138,7 +138,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n8",
@@ -149,7 +149,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: true,
+        draggable: false,
     },
 
     {
@@ -161,7 +161,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n10",
@@ -172,7 +172,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: true,
+        draggable: false,
     },
     {
         id: "n11",
@@ -186,7 +186,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "imageDisplay",
-        draggable: true,
+        draggable: false,
     },
 ];
 
@@ -197,7 +197,7 @@ const initialEdges: EdgeType[] = [
         target: "n5",
         sourceHandle: "a",
         type: "smoothstep",
-        animated: true,
+        animated: false,
     },
     {
         id: "n2-n5",
@@ -205,21 +205,21 @@ const initialEdges: EdgeType[] = [
         target: "n5",
         targetHandle: "c",
         type: "smoothstep",
-        animated: true,
+        animated: false,
     },
     {
         id: "n2-n3",
         source: "n2",
         target: "n3",
         type: "smoothstep",
-        animated: true,
+        animated: false,
     },
     {
         id: "n4-n6",
         source: "n4",
         target: "n6",
         type: "smoothstep",
-        animated: true,
+        animated: false,
         targetHandle: "b",
     },
     {
@@ -228,7 +228,7 @@ const initialEdges: EdgeType[] = [
         target: "n6",
         targetHandle: "c",
         type: "smoothstep",
-        animated: true,
+        animated: false,
     },
     {
         id: "n5-n11",
@@ -237,7 +237,7 @@ const initialEdges: EdgeType[] = [
         targetHandle: "b",
         target: "n5",
         type: "smoothstep",
-        animated: true,
+        animated: false,
     },
     {
         id: "n6-n11",
@@ -245,7 +245,7 @@ const initialEdges: EdgeType[] = [
         target: "n6",
         sourceHandle: "b",
         type: "smoothstep",
-        animated: true,
+        animated: false,
     },
 ];
 

@@ -4,6 +4,7 @@ import BenefitCard from "@/components/ui/benefit-card";
 import MoneyNode from "@/components/ui/nodes/money-node";
 import IncomeNode from "@/components/ui/nodes/income-node";
 import { benefitCardData } from "@/app/lib/placeholder-data";
+import InsightNode from "@/components/ui/nodes/insight-node";
 import PaymentNode from "@/components/ui/nodes/payment-node";
 
 // email-template.types.ts
@@ -18,11 +19,10 @@ export default function BenefitSection() {
     return (
         <div
             className={clsx(
-                "paddy flex flex-col gap-y-12 pt-12 md:py-24 lg:pt-32 3xl:w-[1480px] mx-auto",
+                "paddy 3xl:w-[1480px] mx-auto flex flex-col gap-y-12 pt-12 md:py-24 lg:pt-32",
                 geist.className,
             )}
         >
-            
             <span className="mx-auto box-border">
                 <p className="text-foreground pb-3 text-center text-[20px] leading-[1.24] font-medium md:text-[42px] xl:text-[62px]">
                     Clarity and Control Financial Move
@@ -35,30 +35,10 @@ export default function BenefitSection() {
             </span>
             <div className="box-border grid">
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:grid-rows-2">
-                    <IncomeNode data={benefitCardData[0]}/>
-                    <PaymentNode data={benefitCardData[1]}/>
-                    {benefitCardData.slice(2,3).map((cardData, idx) => {
-                        const { title, iconUrl, imageUrl, subject } = cardData;
-                        const big = idx == 0 || idx == 1;
-                        return (
-                            <div
-                                key={idx}
-                                className={clsx(
-                                    "box-border rounded-3xl border border-[#E4E4E4]",
-                                    big ? "lg:col-span-3" : "lg:col-span-2",
-                                )}
-                            >
-                                <BenefitCard
-                                    title={title}
-                                    iconSrc={iconUrl}
-                                    imageSrc={imageUrl}
-                                    subject={subject}
-                                    alt={title}
-                                />
-                            </div>
-                        );
-                    })}
-                    <MoneyNode data={benefitCardData[3]}/>
+                    <IncomeNode data={benefitCardData[0]} />
+                    <PaymentNode data={benefitCardData[1]} />
+                    <InsightNode data={benefitCardData[2]} />
+                    <MoneyNode data={benefitCardData[3]} />
                 </div>
             </div>
         </div>
