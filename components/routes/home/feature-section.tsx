@@ -25,7 +25,7 @@ export default function FeatureSection() {
         >
             <div className="box-border flex flex-col items-center xl:flex-row xl:justify-between">
                 <div className="flex-1">
-                    <p className="text-foreground w-[25ch] text-center text-[42px] leading-[1.24] font-medium xl:w-full xl:text-start xl:text-[60px]">
+                    <p className="text-foreground max-w-[25ch] text-center text-[42px] leading-[1.24] font-medium xl:w-full xl:text-start xl:text-[60px]">
                         Smart Features for Modern Finance
                     </p>
                 </div>

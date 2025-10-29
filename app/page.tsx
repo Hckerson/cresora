@@ -11,7 +11,7 @@ import TestimonialSection from "@/components/routes/home/testimonial";
 
 export default function Home() {
     return (
-        <div className="box-border min-h-screen w-full">
+        <div className="box-border relative min-h-screen w-full">
             <Navbar />
             <HeroSection />
             <Keypoint data={homeFigures} />
