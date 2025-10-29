@@ -4,6 +4,7 @@ import CustomImage from "../custom-image";
 import IconNode from "./components/iconNode";
 import TextNode from "./components/text-node";
 import { useState, useCallback } from "react";
+import PressableNode from "./components/pressable-node";
 import ImageNode from "./components/imageNode";
 import {
     ReactFlow,
@@ -50,6 +51,7 @@ const nodeTypes = {
     textDisplay: TextNode,
     iconDisplay: IconNode,
     imageDisplay: ImageNode,
+    pressableDisplay: PressableNode,
 };
 
 const initialNodes: NodeType[] = [
@@ -151,24 +153,24 @@ const initialNodes: NodeType[] = [
     },
     {
         id: "n9",
-        position: { x: 25, y: 128 },
+        position: { x: 20, y: 104 },
         data: {
-            className: "max-w-[165px] max-h-[105px]",
+            className: "max-w-[265px] max-h-[195px]",
             src: "/images/income.png",
             side: [{ pos: "right", id: "a", type: "target" }],
         },
-        type: "imageDisplay",
+        type: "pressableDisplay",
         draggable: true,
     },
     {
         id: "n10",
-        position: { x: 600, y: 130 },
+        position: { x: 510, y: 104 },
         data: {
-            className: "max-w-[165px] max-h-[105px]",
+            className: "max-w-[265px] max-h-[195px]",
             src: "/images/income.png",
             side: [{ pos: "left", id: "a", type: "target" }],
         },
-        type: "imageDisplay",
+        type: "pressableDisplay",
         draggable: true,
     },
     {
@@ -264,7 +266,7 @@ const initialEdges: EdgeType[] = [
     },
     {
         id: "n10-n11",
-        source: "n10",
+        source: "n11",
         target: "n10",
         type: "smoothstep",
         animated: true,

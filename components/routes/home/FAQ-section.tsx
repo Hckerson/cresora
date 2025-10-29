@@ -43,7 +43,7 @@ export default function FAQSection() {
                                     </p>
                                     <Link
                                         href={feature.link}
-                                        className="bg-background flex h-9 w-30 items-center justify-center rounded-[8px] border border-[#E4E4E4] text-sm font-medium shadow-inner hover:bg-gray-200"
+                                        className="bg-background flex h-9 w-30 items-center justify-center rounded-[8px] border border-[#E4E4E4] text-sm font-medium shadow-inner hover:bg-gray-100"
                                     >
                                         Learn More
                                     </Link>

@@ -2,6 +2,8 @@
 import clsx from "clsx";
 import { NodeProps, Node, Handle, Position } from "@xyflow/react";
 import React from "react";
+import { leftFrameData } from "@/app/lib/placeholder-data";
+import Pressable from "./pressable";
 
 type side = "left" | "right" | "top" | "bottom";
 
@@ -10,14 +12,10 @@ type TextNodeProps = Node<
         className?: string;
         side?: [{ pos: side; id: string; type: "source" | "target" }];
     },
-    "icon"
+    "pressable"
 >;
 
-interface Pressable extends TextNodeProps{
-    children: React.ReactNode
-}
-
-export default function PressableNode(props: Pressable) {
+export default function PressableNode(props: NodeProps<TextNodeProps>) {
     return (
         <div
             className={clsx(
@@ -25,7 +23,7 @@ export default function PressableNode(props: Pressable) {
                 props.data.className,
             )}
         >
-            {props.children}
+            <Pressable data={leftFrameData[0]} showButton />
             {props.data.side?.map((side, idx) => {
                 return (
                     <Handle

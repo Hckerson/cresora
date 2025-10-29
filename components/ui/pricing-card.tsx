@@ -62,7 +62,7 @@ export default function PricingPlanCard({
                         style={
                             name == "Growth"
                                 ? "hover:bg-blue-600"
-                                : "hover:bg-gray-200"
+                                : "hover:bg-gray-100"
                         }
                     >
                         <Link
@@ -79,7 +79,7 @@ export default function PricingPlanCard({
                     This plan includes
                 </p>
                 <ul className="flex w-full flex-col gap-y-4 text-xs md:text-[12px] xl:text-[18px]">
-                    <li className="flex items-center gap-x-3 ">
+                    <li className="flex items-center gap-x-3">
                         <CheckIcon /> <p>{aiGrade} AI-powered spend insights</p>
                     </li>
 

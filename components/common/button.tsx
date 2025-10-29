@@ -34,7 +34,7 @@ export default function Button({
         <button
             {...rest}
             className={clsx(
-                "relative z-0 flex items-center justify-center overflow-hidden shadow-inner",
+                "relative z-0 flex items-center justify-center cursor-pointer overflow-hidden shadow-inner",
                 colors,
                 visibility,
                 sizes,

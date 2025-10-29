@@ -12,8 +12,8 @@ export interface FrameProps {
     showButton?: boolean
 }
 
-export default function FrameCard({ data }: { data: FrameProps }) {
-    const { name, value, amount, action, percentage, showButton } = data;
+export default function FrameCard({ data, showButton }: { data: FrameProps, showButton?:boolean }) {
+    const { name, value, amount, action, percentage } = data;
     return (
         <div
             className={clsx(
