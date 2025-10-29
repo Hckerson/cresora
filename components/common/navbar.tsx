@@ -57,20 +57,21 @@ export default function Navbar() {
                     Sign in
                 </Button>
             </div>
-            <div className="absolute inset-0 mt-[93px] h-screen  z-20 block gap-y-4 lg:hidden">
+            <div className="absolute inset-0 z-20 mt-[93px] block h-screen gap-y-4 lg:hidden">
                 {isMenuOpen && (
-                    <ul className="flex flex-col h-full relative gap-y-3 bg-red-300">
-                        <li className="box-border w-full ">
+                    <div className="relative flex h-full flex-col gap-y-3 bg-black/50">
+                        <div className="flex flex-col p-4 xs:p-6 md:p-8 h-full">
                             <Button
-                                variant="ghost"
+                                variant="default"
+                                visibility="md:hidden block"
                                 size="lg"
-                                visibility="lg:block hidden"
                                 style="hover:bg-gray-100"
                             >
                                 Sign in
                             </Button>
-                        </li>
-                    </ul>
+
+                        </div>
+                    </div>
                 )}
             </div>
         </div>
