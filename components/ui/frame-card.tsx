@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Ellipsis } from "lucide-react";
 import { inter } from "@/app/fonts";
+import Button from "../common/button";
 
 export interface FrameProps {
     name: string;
@@ -8,10 +9,11 @@ export interface FrameProps {
     amount: string;
     action: string;
     percentage: string;
+    showButton?: boolean
 }
 
 export default function FrameCard({ data }: { data: FrameProps }) {
-    const { name, value, amount, action, percentage } = data;
+    const { name, value, amount, action, percentage, showButton } = data;
     return (
         <div
             className={clsx(
@@ -43,10 +45,15 @@ export default function FrameCard({ data }: { data: FrameProps }) {
                         </span>
                     </div>
                     <p className="text-primary-foreground text-xs">
-                        You {action}{" "}
+                        {action}{" "}
                         <span className="text-foreground font-semibold">{`${amount}`}</span>{" "}
                         this month
                     </p>
+                     {showButton && (
+                        <Button variant="ghost">
+                            Analyze
+                        </Button>
+                     )}
                 </div>
             </div>
         </div>

@@ -1,9 +1,10 @@
 import clsx from "clsx";
 import { geist } from "@/app/fonts";
 import BenefitCard from "@/components/ui/benefit-card";
-import IncomeNode from "@/components/ui/nodes/income-node";
 import MoneyNode from "@/components/ui/nodes/money-node";
+import IncomeNode from "@/components/ui/nodes/income-node";
 import { benefitCardData } from "@/app/lib/placeholder-data";
+import PaymentNode from "@/components/ui/nodes/payment-node";
 
 // email-template.types.ts
 export interface BenefitCardProps {
@@ -35,7 +36,8 @@ export default function BenefitSection() {
             <div className="box-border grid">
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:grid-rows-2">
                     <IncomeNode data={benefitCardData[0]}/>
-                    {benefitCardData.slice(1,3).map((cardData, idx) => {
+                    <PaymentNode data={benefitCardData[1]}/>
+                    {benefitCardData.slice(2,3).map((cardData, idx) => {
                         const { title, iconUrl, imageUrl, subject } = cardData;
                         const big = idx == 0 || idx == 1;
                         return (

@@ -1,25 +1,32 @@
 "use client";
-import { NodeProps, Node, Position, Handle } from "@xyflow/react";
 import clsx from "clsx";
+import { NodeProps, Node, Handle, Position } from "@xyflow/react";
+import React from "react";
 
 type side = "left" | "right" | "top" | "bottom";
 
 type TextNodeProps = Node<
     {
-        label: string;
-        side: [{ pos: side; id: string; type: "source" | "target" }];
-        theme?: "light" | "dark";
+        className?: string;
+        side?: [{ pos: side; id: string; type: "source" | "target" }];
     },
-    "text"
+    "icon"
 >;
 
-export default function TextNode(props: NodeProps<TextNodeProps>) {
+interface Pressable extends TextNodeProps{
+    children: React.ReactNode
+}
+
+export default function PressableNode(props: Pressable) {
     return (
-        <div className="rounded-full border border-[#E4E4E4] bg-white p-1">
-            <div className={clsx("rounded-full border  p-3", props.data.theme == 'dark'?"text-white border-[#000000]/8 bg-gradient-to-r from-[#666666] to-[#333333]":"border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] text-black")}>
-                <p>{props.data?.label}</p>
-            </div>
-            {props.data.side.map((side, idx) => {
+        <div
+            className={clsx(
+                "rounded-2xl border border-[#E4E4E4] bg-[#FFFFFF]",
+                props.data.className,
+            )}
+        >
+            {props.children}
+            {props.data.side?.map((side, idx) => {
                 return (
                     <Handle
                         key={idx}
