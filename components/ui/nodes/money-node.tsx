@@ -1,10 +1,10 @@
 "use client";
 import "@xyflow/react/dist/style.css";
 import CustomImage from "../custom-image";
-import IconNode from "./components/iconNode";
+import IconNode from "./components/icon-node";
 import TextNode from "./components/text-node";
 import { useState, useCallback } from "react";
-import ImageNode from "./components/imageNode";
+import ImageNode from "./components/image-node";
 import {
     ReactFlow,
     Background,
@@ -39,7 +39,7 @@ interface EdgeType {
     id: string;
     source: string;
     target: string;
-    animated: boolean
+    animated: boolean;
     type: string;
     sourceHandle?: string;
     targetHandle?: string;
@@ -268,7 +268,7 @@ export default function MoneyNode({ data }: { data: NodeProps }) {
     const { title, subject, alt = `Picture of ${data.title}`, iconUrl } = data;
 
     return (
-        <div className="box-border h-[400px] rounded-3xl border border-[#E4E4E4] md:h-[350px] lg:col-span-2 lg:h-full">
+        <div className="box-border h-[400px] rounded-3xl border border-[#E4E4E4] md:h-[350px] lg:col-span-2 lg:h-[488px]">
             <div className="bg-background box-border flex h-full flex-col justify-between gap-y-8 overflow-hidden rounded-3xl p-4 md:p-6 xl:p-8">
                 <div className="relative">
                     <CustomImage

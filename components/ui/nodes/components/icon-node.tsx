@@ -1,23 +1,36 @@
 "use client";
-import { NodeProps, Node, Position, Handle } from "@xyflow/react";
 import clsx from "clsx";
+import Image from "next/image";
+import { NodeProps, Node, Handle, Position } from "@xyflow/react";
 
 type side = "left" | "right" | "top" | "bottom";
 
 type TextNodeProps = Node<
     {
-        label: string;
+        src: string;
+        srcFor: "icon" | "image";
         side: [{ pos: side; id: string; type: "source" | "target" }];
-        theme?: "light" | "dark";
     },
-    "text"
+    "icon"
 >;
 
-export default function TextNode(props: NodeProps<TextNodeProps>) {
+export default function IconNode(props: NodeProps<TextNodeProps>) {
+    const styles = {
+        "h-full w-full rounded-full border border-[#000000]/8":
+            props.data.srcFor == "image",
+        "h-full w-full rounded-full border border-[#000000]/8 p-1.5 bg-gradient-to-r from-[#666666] to-[#333333]":
+            props.data.srcFor == "icon",
+    };
     return (
-        <div className="rounded-full border border-[#E4E4E4] bg-white p-1">
-            <div className={clsx("rounded-full border  p-3", props.data.theme == 'dark'?"text-white border-[#000000]/8 bg-gradient-to-r from-[#666666] to-[#333333]":"border-[#000000]/8 bg-gradient-to-r from-[#FAFAFA] to-[#EBEBEB] text-black")}>
-                <p className="text-[12px] text-[#030E1F]">{props.data?.label}</p>
+        <div className="size-[40px] rounded-full border border-[#E4E4E4] bg-white p-1">
+            <div className={clsx("", styles)}>
+                <Image
+                    className="h-full"
+                    alt="Node image"
+                    src={props.data.src}
+                    width={100}
+                    height={100}
+                ></Image>
             </div>
             {props.data.side.map((side, idx) => {
                 return (

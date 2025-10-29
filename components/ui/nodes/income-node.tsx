@@ -1,10 +1,10 @@
 "use client";
 import "@xyflow/react/dist/style.css";
 import CustomImage from "../custom-image";
-import IconNode from "./components/iconNode";
+import IconNode from "./components/icon-node";
 import TextNode from "./components/text-node";
 import { useState, useCallback } from "react";
-import ImageNode from "./components/imageNode";
+import ImageNode from "./components/image-node";
 import {
     ReactFlow,
     Background,
@@ -38,7 +38,7 @@ interface NodeType {
 interface EdgeType {
     id: string;
     source: string;
-    animated: boolean
+    animated: boolean;
     target: string;
     type: string;
     sourceHandle?: string;
@@ -51,7 +51,6 @@ const nodeTypes = {
     imageDisplay: ImageNode,
 };
 
-
 const initialNodes: NodeType[] = [
     {
         id: "n1",
@@ -61,7 +60,7 @@ const initialNodes: NodeType[] = [
             side: [{ pos: "bottom", id: "a", type: "source" }],
         },
         type: "textDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n2",
@@ -74,7 +73,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "textDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n3",
@@ -87,7 +86,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "textDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n4",
@@ -97,7 +96,7 @@ const initialNodes: NodeType[] = [
             side: [{ pos: "bottom", id: "a", type: "source" }],
         },
         type: "textDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n5",
@@ -112,7 +111,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "iconDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n6",
@@ -127,7 +126,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "iconDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n7",
@@ -138,7 +137,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n8",
@@ -149,7 +148,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: false,
+        draggable: true,
     },
 
     {
@@ -161,7 +160,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n10",
@@ -172,7 +171,7 @@ const initialNodes: NodeType[] = [
             side: [],
         },
         type: "iconDisplay",
-        draggable: false,
+        draggable: true,
     },
     {
         id: "n11",
@@ -186,7 +185,7 @@ const initialNodes: NodeType[] = [
             ],
         },
         type: "imageDisplay",
-        draggable: false,
+        draggable: true,
     },
 ];
 
@@ -197,7 +196,7 @@ const initialEdges: EdgeType[] = [
         target: "n5",
         sourceHandle: "a",
         type: "smoothstep",
-        animated: false,
+        animated: true,
     },
     {
         id: "n2-n5",
@@ -205,21 +204,21 @@ const initialEdges: EdgeType[] = [
         target: "n5",
         targetHandle: "c",
         type: "smoothstep",
-        animated: false,
+        animated: true,
     },
     {
         id: "n2-n3",
         source: "n2",
         target: "n3",
         type: "smoothstep",
-        animated: false,
+        animated: true,
     },
     {
         id: "n4-n6",
         source: "n4",
         target: "n6",
         type: "smoothstep",
-        animated: false,
+        animated: true,
         targetHandle: "b",
     },
     {
@@ -228,7 +227,7 @@ const initialEdges: EdgeType[] = [
         target: "n6",
         targetHandle: "c",
         type: "smoothstep",
-        animated: false,
+        animated: true,
     },
     {
         id: "n5-n11",
@@ -237,7 +236,7 @@ const initialEdges: EdgeType[] = [
         targetHandle: "b",
         target: "n5",
         type: "smoothstep",
-        animated: false,
+        animated: true,
     },
     {
         id: "n6-n11",
@@ -245,7 +244,7 @@ const initialEdges: EdgeType[] = [
         target: "n6",
         sourceHandle: "b",
         type: "smoothstep",
-        animated: false,
+        animated: true,
     },
 ];
 
@@ -271,7 +270,7 @@ export default function IncomeNode({ data }: { data: NodeProps }) {
     const { title, subject, alt = `Picture of ${data.title}`, iconUrl } = data;
 
     return (
-        <div className="box-border h-[400px] rounded-3xl border border-[#E4E4E4] md:h-[350px] lg:col-span-2 lg:h-full">
+        <div className="box-border h-[400px] rounded-3xl border border-[#E4E4E4] md:h-[350px] lg:col-span-2 lg:h-[488px]">
             <div className="bg-background box-border flex h-full flex-col justify-between gap-y-8 overflow-hidden rounded-3xl p-4 md:p-6 xl:p-8">
                 <div className="relative">
                     <CustomImage
